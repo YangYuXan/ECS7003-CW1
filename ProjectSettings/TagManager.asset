@@ -6,6 +6,7 @@ TagManager:
   tags:
   - jit
   - Character
+  - Terrain
   layers:
   - Default
   - TransparentFX
