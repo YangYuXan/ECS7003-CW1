@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using CharacterCampSpace;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Character : MonoBehaviour
+namespace CharacterCampSpace
 {
-
     public enum CharacterCamp
     {
         human,
         monster
     }
+}
+
+public class Character : MonoBehaviour
+{
 
     public enum Interaction
     {
@@ -26,16 +30,24 @@ public class Character : MonoBehaviour
         idile
     }
 
+    public enum CharacterStatus
+    {
+        normal,
+        battle
+    }
+
     private NavMeshAgent agent;
     public CharacterCamp camp;
     public string CharacterName;
 
     private MoveStatus moveStatus = MoveStatus.idile;
+    private CharacterStatus _characterStatus = CharacterStatus.normal;
 
     public float health;
     public float attackValue;
     public float attackRadius;
     public float speed;
+    public int attackOrder=-1;
 
     private GameObject target;
     private Vector3 targetPosition;
@@ -66,7 +78,7 @@ public class Character : MonoBehaviour
                 if (Vector3.Distance(transform.position,target.transform.position) < attackRadius)
                 {
                     agent.isStopped = true;
-                    ApplyDamage();
+                    ApplyDamage(target);
                     moveStatus = MoveStatus.idile;
                 }
                 break;
@@ -97,22 +109,33 @@ public class Character : MonoBehaviour
         health += dealValue;
     }
 
-    void ApplyDamage()
+    void ApplyDamage(GameObject target)
     {
         print("attack");
+        target.GetComponent<Character>().RecvDamage();
     }
 
     void RecvDamage()
     {
         //通知伙伴加入战斗
         GameMode gameMode = FindFirstObjectByType<GameMode>();
-        if (gameMode.GetBattleStatus())
+        if (!gameMode.GetBattleStatus())
         {
-            
+            gameMode.GenerateQueue(transform.position,camp);
         }
         else
         {
             gameMode.SetBattle(true);
         }
+    }
+
+    public void SetCharacterStatus(CharacterStatus status)
+    {
+        _characterStatus = status;
+    }
+
+    public CharacterStatus GetCharacterStatus()
+    {
+        return _characterStatus;
     }
 }
