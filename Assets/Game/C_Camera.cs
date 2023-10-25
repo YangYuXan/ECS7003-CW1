@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using Camera = UnityEngine.Camera;
 
 public class C_Camera : MonoBehaviour
@@ -8,7 +9,7 @@ public class C_Camera : MonoBehaviour
     {
         freedom,
         track,
-        clockwiseRotate, 
+        clockwiseRotate,
         anticlockwiseRotation,
         freeRotate,
         zoom,
@@ -18,7 +19,7 @@ public class C_Camera : MonoBehaviour
     public GameObject targetPointMark;
     public GameObject playerPawn;
 
-    public Vector3 moveValue = new Vector3(0,0,0);
+    public Vector3 moveValue = new Vector3(0, 0, 0);
     public CameraMode cameraMode = CameraMode.freedom;
     float _duration = 10f;
     private float _duration_Zoom = 0.5f;
@@ -39,9 +40,9 @@ public class C_Camera : MonoBehaviour
         camera = GetComponent<Camera>();
         var ray = new Ray(transform.position, transform.forward);
         Physics.Raycast(ray, out casHit);
-        _y_distance = (transform.position.y - casHit.point.y)/15;
-        _z_distance = (transform.position.z - casHit.point.z)/15;
-        _rotateDegree = (transform.rotation.x-5) / 3;
+        _y_distance = (transform.position.y - casHit.point.y) / 15;
+        _z_distance = (transform.position.z - casHit.point.z) / 15;
+        _rotateDegree = (transform.rotation.x - 5) / 3;
         print(_rotateDegree);
     }
 
@@ -54,25 +55,20 @@ public class C_Camera : MonoBehaviour
         switch (cameraMode)
         {
             case CameraMode.clockwiseRotate:
-                if (casHit.collider.gameObject!=null)
-                {
-                    transform.RotateAround(casHit.point, casHit.collider.gameObject.transform.up, 3);
-                }
+                transform.Rotate(Vector3.up, 3, Space.World);
                 break;
 
             case CameraMode.anticlockwiseRotation:
-                if (casHit.collider.gameObject != null)
-                {
-                    transform.RotateAround(casHit.point, casHit.collider.gameObject.transform.up, -3);
-                }
+                transform.Rotate(Vector3.up, -3, Space.World);
                 break;
 
             case CameraMode.track:
                 if (_timer < _duration - 9.3)
-                { 
+                {
                     float t = _timer / _duration;
                     transform.position = Vector3.Lerp(transform.position,
-                        new Vector3(casHit.collider.gameObject.transform.position.x, transform.position.y, casHit.collider.gameObject.transform.position.y), t);
+                        new Vector3(casHit.collider.gameObject.transform.position.x, transform.position.y,
+                            casHit.collider.gameObject.transform.position.y), t);
                     _timer += Time.deltaTime;
                 }
                 else if (Vector3.Distance(transform.position, casHit.collider.gameObject.transform.position) < 20)
@@ -80,16 +76,18 @@ public class C_Camera : MonoBehaviour
                     cameraMode = CameraMode.freedom;
                     _timer = 0;
                 }
+
                 break;
 
             case CameraMode.zoom:
                 Vector3 position_buff = new Vector3(0, _y_distance, _z_distance);
                 if (_timer < _duration_Zoom)
-                { 
+                {
                     float t = _timer / _duration_Zoom;
                     transform.position = Vector3.Lerp(transform.position, transform.position - position_buff, t);
                     _timer += 0.1f;
                 }
+
                 break;
 
             case CameraMode.zoom_out:
@@ -100,11 +98,6 @@ public class C_Camera : MonoBehaviour
                 break;
 
             case CameraMode.freedom:
-                /*
-                var ray = new Ray(transform.position, transform.forward);
-                Physics.Raycast(ray, out casHit);
-                Debug.DrawRay(transform.position, ray.direction * 200, Color.red);
-                */
                 break;
         }
 
@@ -114,16 +107,17 @@ public class C_Camera : MonoBehaviour
     {
         moveValue.z = value.Get<Vector2>().y;
         moveValue.x = value.Get<Vector2>().x;
-        _moveDir = new Vector3(transform.forward.x, 0, transform.forward.z) * moveValue.z + transform.right * moveValue.x;
+        _moveDir = new Vector3(transform.forward.x, 0, transform.forward.z) * moveValue.z +
+                   transform.right * moveValue.x;
     }
 
     void OnInteract()
     {
 
         var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        
 
-        Debug.DrawRay(transform.position, ray.direction*200, Color.red);
+
+        Debug.DrawRay(transform.position, ray.direction * 200, Color.red);
 
         if (Physics.Raycast(ray, out casHit))
         {
@@ -131,9 +125,21 @@ public class C_Camera : MonoBehaviour
             {
                 Transform spawnPoint = casHit.collider.gameObject.transform;
                 Instantiate(targetPointMark, casHit.point, spawnPoint.rotation);
-                Character component =playerPawn.gameObject.GetComponent<Character>();
-                component.AI_MovetoPoint(casHit.point);
-                
+                Character component = playerPawn.gameObject.GetComponent<Character>();
+
+                //-1 为未进入战斗模式
+                if (component.attackOrder == -1)
+                {
+                    component.AI_MovetoPoint(casHit.point);
+                }
+                //进入战斗
+                else
+                {
+                    if (component.GetCanOperate())
+                    {
+                        component.AI_MovetoPoint(casHit.point);
+                    }
+                }
             }
             else
             {
@@ -148,25 +154,15 @@ public class C_Camera : MonoBehaviour
 
     void OnCameraRotate(InputValue value)
     {
-        if (value.Get<Vector2>().y!=0)
+        if (value.Get<Vector2>().y != 0)
         {
-            print("rotate");
-            var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (value.Get<Vector2>().y > 0)
-            {
-                Physics.Raycast(ray, out casHit);
-                cameraMode = CameraMode.clockwiseRotate;
-            }
-            else
-            {
-                Physics.Raycast(ray, out casHit);
-                cameraMode = CameraMode.anticlockwiseRotation;
-            }
-            
+            cameraMode = value.Get<Vector2>().y > 0
+                ? cameraMode = CameraMode.clockwiseRotate
+                : cameraMode = CameraMode.anticlockwiseRotation;
+
         }
         else
         {
-            print("stop");
             cameraMode = CameraMode.freedom;
         }
     }
@@ -177,23 +173,10 @@ public class C_Camera : MonoBehaviour
         {
             cameraMode = CameraMode.zoom_out;
         }
-        else if(value.Get<Vector2>().y < 0)
+        else if (value.Get<Vector2>().y < 0)
         {
             cameraMode = CameraMode.zoom;
         }
-        //if (value.Get<Vector2>().y > 0)
-        //{
-        //    Vector3 position_buff = new Vector3(0, _y_distance, _z_distance);
-        //    transform.position = transform.position-position_buff;
-        //    transform.Rotate(new Vector3(_rotateDegree, 0,0), Space.World);
-        //}
-        //else if (value.Get<Vector2>().y < 0)
-        //{
-        //    float rotation_x_buff = transform.rotation.x + _rotateDegree;
-        //    Vector3 position_buff = new Vector3(0, _y_distance, _z_distance);
-        //    transform.position += position_buff;
-        //}
-
     }
 
     void OnRotate(InputValue value)
@@ -206,6 +189,12 @@ public class C_Camera : MonoBehaviour
         {
             cameraMode = CameraMode.freedom;
         }
+    }
+
+    void OnClick(InputValue value)
+    {
+        print(value.Get<Vector2>().x);
+
     }
 
 }

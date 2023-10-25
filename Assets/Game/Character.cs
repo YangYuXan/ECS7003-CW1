@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using CharacterCampSpace;
-using UnityEditor.UI;
+using NUnit.Framework.Constraints;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,6 +13,11 @@ namespace CharacterCampSpace
         human,
         monster
     }
+}
+
+public class GOAP
+{
+    public string goapname;
 }
 
 public class Character : MonoBehaviour
@@ -43,14 +49,27 @@ public class Character : MonoBehaviour
     private MoveStatus moveStatus = MoveStatus.idile;
     private CharacterStatus _characterStatus = CharacterStatus.normal;
 
+    //Character Property
     public float health;
     public float attackValue;
     public float attackRadius;
+    public float attackCostPoint;
     public float speed;
+    public float defenceValue;
     public int attackOrder=-1;
+    private bool _canOperate = true;
+    private bool _isNeardeath = false;
+    private bool _isDeath = false;
+    private bool _isFallDown = false;
+    public bool _isPlayPawn;
+    public float maxOperatePoint;
+    public float currentOperatePoint;
+    public TextMeshProUGUI operatePoint;
 
     private GameObject target;
     private Vector3 targetPosition;
+
+    //
 
     // Start is called before the first frame update
     void Start()
@@ -61,28 +80,34 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (moveStatus)
+        operatePoint.text = "OperatePoint:" + currentOperatePoint;
+
+        if (!_isNeardeath && !_isDeath)
         {
-            case MoveStatus.idile:
-                break;
+            switch (moveStatus)
+            {
+                case MoveStatus.idile:
+                    break;
 
-            case MoveStatus.move:
-                GetAgent();
-                agent.SetDestination(targetPosition);
-                agent.isStopped = false;
-                break;
+                case MoveStatus.move:
+                    GetAgent();
+                    agent.SetDestination(targetPosition);
+                    agent.isStopped = false;
+                    break;
 
-            case MoveStatus.moveAndAttack:
-                agent.isStopped = false;
-                agent.SetDestination(target.transform.position);
-                if (Vector3.Distance(transform.position,target.transform.position) < attackRadius)
-                {
-                    agent.isStopped = true;
-                    ApplyDamage(target);
-                    moveStatus = MoveStatus.idile;
-                }
-                break;
+                case MoveStatus.moveAndAttack:
+                    agent.isStopped = false;
+                    agent.SetDestination(target.transform.position);
+                    if (Vector3.Distance(transform.position, target.transform.position) < attackRadius)
+                    {
+                        agent.isStopped = true;
+                        ApplyDamage(target);
+                        moveStatus = MoveStatus.idile;
+                    }
+                    break;
+            }
         }
+        
     }
 
     public void AI_MovetoPoint(Vector3 position)
@@ -112,21 +137,43 @@ public class Character : MonoBehaviour
     void ApplyDamage(GameObject target)
     {
         print("attack");
-        target.GetComponent<Character>().RecvDamage();
+        target.GetComponent<Character>().RecvDamage(attackValue);
     }
 
-    void RecvDamage()
+    void RecvDamage(float hurtValue)
     {
         //通知伙伴加入战斗
         GameMode gameMode = FindFirstObjectByType<GameMode>();
         if (!gameMode.GetBattleStatus())
         {
             gameMode.GenerateQueue(transform.position,camp);
+            gameMode.SetBattle(true);
+        } 
+        //roll点判定是否会造成伤害
+        if (defenceValue > hurtValue)
+        {
+            float randomValue = Random.Range(0f, 100f);
+            if (randomValue <= 60)
+            {
+                SetHP(hurtValue*-1);
+                if (health <= 0)
+                {
+                    _isNeardeath = true;
+                }
+            }
         }
         else
         {
-            gameMode.SetBattle(true);
+            SetHP(hurtValue * -1);
+            if (health <= 0)
+            {
+                _isNeardeath = true;
+            }
         }
+
+
+        
+
     }
 
     public void SetCharacterStatus(CharacterStatus status)
@@ -137,5 +184,49 @@ public class Character : MonoBehaviour
     public CharacterStatus GetCharacterStatus()
     {
         return _characterStatus;
+    }
+
+    public void SetCanOperate(bool can)
+    {
+        _canOperate = can;
+    }
+
+    public bool GetCanOperate()
+    {
+        return _canOperate;
+    }
+
+    public void SetNeardeath()
+    {
+        if (health <= 0)
+        {
+            _isNeardeath = true;
+        }
+    }
+
+    public void SetDeath()
+    {
+        if (_isNeardeath)
+        {
+            _isDeath = true;
+        }
+    }
+
+    public bool GetDeath()
+    {
+        return _isDeath;
+    }
+
+    public bool GetNearDeath()
+    {
+        return _isNeardeath;
+    }
+
+    public void AiStrategy()
+    {
+        if (!_isPlayPawn)
+        {
+            
+        }
     }
 }
