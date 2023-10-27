@@ -235,6 +235,7 @@ public class Character : MonoBehaviour
         //如果不是玩家控制的，则进行策略
         if (!_isPlayPawn)
         {
+            //
             print("计算策略");
         }
     }
