@@ -1,4 +1,4 @@
-using DG.Tweening;
+// using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
@@ -53,7 +53,8 @@ public class BattleUI : UIBase
         Vector2 startPos = new Vector2(-cardItemList.Count / 2f * offset + offset * 0.5f, -120);
         for (int i = 0; i < cardItemList.Count; i++)
         {
-            cardItemList[i].GetComponent<RectTransform>().DOAnchorPos(startPos, 0.5f);
+            // cardItemList[i].GetComponent<RectTransform>().DOAnchorPos(startPos, 0.5f);
+            cardItemList[i].GetComponent<RectTransform>().position = startPos;
             startPos.x = startPos.x + offset;
         }
     }
@@ -70,8 +71,8 @@ public class BattleUI : UIBase
         // Refresh card position
         UpdateCardItemPos();
         // Discard card
-        item.GetComponent<RectTransform>().DOAnchorPos(new Vector2(1000, -700), 0.25f);
-        item.transform.DOScale(0, 0.25f);
+        // item.GetComponent<RectTransform>().DOAnchorPos(new Vector2(1000, -700), 0.25f);
+        // item.transform.DOScale(0, 0.25f);
         Destroy(item.gameObject, 1);
     }
 
