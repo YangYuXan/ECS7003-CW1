@@ -74,15 +74,15 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentOperatePoint = maxOperatePoint;
     }
 
     // Update is called once per frame
     void Update()
     {
-        operatePoint.text = "OperatePoint:" + currentOperatePoint;
+        //operatePoint.text = "OperatePoint:" + currentOperatePoint;
 
-        if (!_isNeardeath && !_isDeath)
+        if (!_isNeardeath && !_isDeath||_canOperate)
         {
             switch (moveStatus)
             {
@@ -136,19 +136,27 @@ public class Character : MonoBehaviour
 
     void ApplyDamage(GameObject target)
     {
-        print("attack");
-        target.GetComponent<Character>().RecvDamage(attackValue);
+        if (currentOperatePoint>attackCostPoint)
+        {
+            currentOperatePoint -= attackCostPoint;
+            //Debug Log
+            print("attack");
+
+            //处理受事件
+            target.GetComponent<Character>().RecvDamage(attackValue);
+        }
     }
 
     void RecvDamage(float hurtValue)
     {
-        //通知伙伴加入战斗
+        //通知伙伴加入战斗,处于战斗状态了则不需要通知
         GameMode gameMode = FindFirstObjectByType<GameMode>();
         if (!gameMode.GetBattleStatus())
         {
             gameMode.GenerateQueue(transform.position,camp);
             gameMode.SetBattle(true);
         } 
+
         //roll点判定是否会造成伤害
         if (defenceValue > hurtValue)
         {
@@ -224,9 +232,10 @@ public class Character : MonoBehaviour
 
     public void AiStrategy()
     {
+        //如果不是玩家控制的，则进行策略
         if (!_isPlayPawn)
         {
-            
+            print("计算策略");
         }
     }
 }

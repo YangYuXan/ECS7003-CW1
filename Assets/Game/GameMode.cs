@@ -9,7 +9,7 @@ public class GameMode : MonoBehaviour
     public Button turnEndButton;
 
     private List<Character> battleQueue = new List<Character>();
-    private Character determineRole;
+    private Character[] canOperateRoles;
     private int _currentAttackIndex=0;
     private bool _isPlayerTurn=true;
     private bool _isBattle;
@@ -98,7 +98,7 @@ public class GameMode : MonoBehaviour
             //角色非倒地，非死亡则符合行动
             if (!battleQueue[i].GetDeath() && !battleQueue[i].GetNearDeath())
             {
-
+                battleQueue[i].AiStrategy();
                 break;
             }
         }
