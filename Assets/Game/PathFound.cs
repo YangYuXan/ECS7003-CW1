@@ -14,7 +14,7 @@ public class PathFound : MonoBehaviour
         Normal
     }
 
-    private MoveMode moveMode = MoveMode.Normal;
+    public MoveMode moveMode = MoveMode.Normal;
 
     // Start is called before the first frame update
     void Start()

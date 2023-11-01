@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8378031076573087260}
   m_Layer: 0
   m_Name: TargetPoint
-  m_TagString: Untagged
+  m_TagString: mark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

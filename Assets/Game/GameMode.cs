@@ -8,8 +8,8 @@ public class GameMode : MonoBehaviour
 {
     public Button turnEndButton;
 
-    private List<Character> battleQueue = new List<Character>();
-    private Character[] canOperateRoles;
+    private List<Character> battleQueue = new();
+    //private Character[] canOperateRoles;
     private int _currentAttackIndex=0;
     private bool _isPlayerTurn=true;
     private bool _isBattle;
@@ -24,22 +24,32 @@ public class GameMode : MonoBehaviour
         
     }
 
-    public void GenerateQueue(Vector3 position, CharacterCamp camp )
+    public void GenerateQueue(Vector3 position, CharacterCamp camp,GameObject inital )
     {
         //将范围内所有符合要求的角色拉入战斗序列
+        //TODO 这个位置不仅要受伤绝色阵营，还需要攻击发起者的阵营
         for(int i=0;i<FindObjectsOfType<Character>().Length;i++)
         {
             if (Vector3.Distance(position, 
-                    FindObjectsOfType<Character>()[i].transform.position)<50&&
-                        FindObjectsOfType<Character>()[i].camp== camp)
+                    FindObjectsOfType<Character>()[i].transform.position)<50)
             {
                 battleQueue.Add(FindObjectsOfType<Character>()[i]);
             }
         }
-
-        //计算角色移动顺序
-        CalcAttackOrder();
     }
+
+    //生成目标队列
+    public void GenerateHateTarget(CharacterCamp selfCamp,GameObject Enermy)
+    {
+        for (int i = 0; i < battleQueue.Count; i++)
+        {
+            if (battleQueue[i].camp == selfCamp)
+            {
+                battleQueue[i].hateTarget = Enermy;
+            }
+        }
+    }
+
 
     public void CalcAttackOrder()
     {
@@ -56,6 +66,12 @@ public class GameMode : MonoBehaviour
             {
                 battleQueue[i].SetCanOperate(false);
             }
+            
+        }
+        //当一号机不是玩家控制时，让一号机开始行动
+        if (!battleQueue[0]._isPlayPawn)
+        {
+            battleQueue[0].AiStrategy();
         }
     }
 
@@ -85,12 +101,16 @@ public class GameMode : MonoBehaviour
         {
             //处理UI效果
             turnEndButton.enabled=false;
-            ColorBlock disableColor = new ColorBlock();
+            ColorBlock disableColor = new();
             disableColor.normalColor = new Color(0.75f, 0.75f, 0.75f,1);
             turnEndButton.colors = disableColor;
         }
 
         _currentAttackIndex++;
+        if (_currentAttackIndex > battleQueue.Count)
+        {
+            _currentAttackIndex = 0;
+        }
 
         //获取队列中下一位可以战斗的角色
         for (int i = _currentAttackIndex; i < battleQueue.Count; i++)
