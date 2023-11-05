@@ -50,7 +50,7 @@ public class BattleUI : UIBase
     {
 
         float offset = 100f / cardItemList.Count;
-        Vector2 startPos = new Vector2(-cardItemList.Count / 2f * offset + offset * 0.5f, -120);
+        Vector2 startPos = new Vector2(cardItemList.Count / 2f * offset + offset * 35f, 100);
         for (int i = 0; i < cardItemList.Count; i++)
         {
             // cardItemList[i].GetComponent<RectTransform>().DOAnchorPos(startPos, 0.5f);
@@ -88,7 +88,7 @@ public class BattleUI : UIBase
         for (int i = 0; i < count; i++)
         {
             GameObject obj = Instantiate(Resources.Load("UI/CardItem"), transform) as GameObject;
-            obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(-100, -70);
+            obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(1000, 70);
             // var item = obj.AddComponent<CardItem>();
             string cardType = BattleActionManager.Instance.DrawCard();
             Debug.Log(cardType);

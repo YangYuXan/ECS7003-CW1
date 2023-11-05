@@ -7,11 +7,13 @@ TagManager:
   - jit
   - Character
   - Terrain
+  - EnemyUI
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - 

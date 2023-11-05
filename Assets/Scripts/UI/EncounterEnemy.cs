@@ -15,8 +15,10 @@ public class EncounterEnemy : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("trigger");
         if(other.gameObject.CompareTag("Enemy") && outBattle)
         {
+            Debug.Log("if trigger");
             BattleManager.Instance.EnterBattle(other.gameObject);
         }
     }
