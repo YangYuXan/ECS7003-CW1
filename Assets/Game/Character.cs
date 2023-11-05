@@ -61,7 +61,6 @@ public class Character : MonoBehaviour
     public float currentHealth;
     public float attackValue;
     public float attackRadius;
-    public float attackCostPoint;
     public float speed;
     public float defenceValue;
     public int attackOrder=-1;
@@ -71,10 +70,15 @@ public class Character : MonoBehaviour
     public bool _isPlayPawn;
     public float MaxMoveDistance;
     public float RemainMoveDistance;
+    public int cardLimited = 2;
 
     //UI element
     public TextMeshProUGUI UI_MaxMoveDistance;
     public TextMeshProUGUI UI_RemainMoveDistance;
+    public TextMeshProUGUI UI_CardLimited;
+    public Button fireBomb;
+    public Button freezeBomb;
+    public Button AddHp;
 
 
     //Abnormal Status
@@ -100,6 +104,21 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (UI_CardLimited != null)
+        {
+            UI_CardLimited.text = "Card Limited: "+cardLimited.ToString();
+        }
+
+        if (_isPlayPawn)
+        {
+            if (cardLimited == 0)
+            {
+                fireBomb.interactable = false;
+                freezeBomb.interactable = false;
+                AddHp.interactable = false;
+            }
+        }
+
         if (UI_MaxMoveDistance != null && UI_RemainMoveDistance != null)
         {
             if (FindFirstObjectByType<GameMode>()._isBattle)
@@ -259,6 +278,8 @@ public class Character : MonoBehaviour
         {
             currentHealth = 0;
             Destroy(this.gameObject);
+            FindFirstObjectByType<GameMode>().battleQueue.Remove(this);
+            FindFirstObjectByType<GameMode>().LeaveBattle();
         }
     }
 
@@ -440,7 +461,7 @@ public class Character : MonoBehaviour
 
     public void AddHP()
     {
-
+        currentHealth += 20;
     }
 
     private void OnCollisionEnter(Collision collision)

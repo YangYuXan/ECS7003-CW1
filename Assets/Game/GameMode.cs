@@ -8,7 +8,7 @@ public class GameMode : MonoBehaviour
 {
     public Button turnEndButton;
 
-    private List<Character> battleQueue = new();
+    public List<Character> battleQueue = new();
     //private Character[] canOperateRoles;
     private int _currentAttackIndex=0;
     public bool _isPlayerTurn=false;
@@ -26,8 +26,6 @@ public class GameMode : MonoBehaviour
 
     public void GenerateQueue(Vector3 position, CharacterCamp camp,GameObject inital )
     {
-        //将范围内所有符合要求的角色拉入战斗序列
-        //TODO 这个位置不仅要受伤绝色阵营，还需要攻击发起者的阵营
         for(int i=0;i<FindObjectsOfType<Character>().Length;i++)
         {
             if (Vector3.Distance(position, 
@@ -110,9 +108,6 @@ public class GameMode : MonoBehaviour
         if (_isPlayerTurn)
         {
             turnEndButton.interactable = false;
-            ColorBlock disableColor = new();
-            disableColor.normalColor = new Color(0.75f, 0.75f, 0.75f,1);
-            turnEndButton.colors = disableColor;
         }
 
         //设定为当前结算角色不可移动
@@ -135,6 +130,7 @@ public class GameMode : MonoBehaviour
                 {
                     _isPlayerTurn = true;
                     turnEndButton.interactable=true;
+
                 }
                 else
                 {
@@ -142,11 +138,39 @@ public class GameMode : MonoBehaviour
 
 
                 }
+
+                battleQueue[i].MaxMoveDistance = 20;
+                battleQueue[i].RemainMoveDistance = 20;
                 battleQueue[i]._canOperate = true;
+                if (battleQueue[i].fireBomb != null && battleQueue[i].freezeBomb != null &&
+                    battleQueue[i].AddHp != null)
+                {
+                    battleQueue[i].fireBomb.interactable = true;
+                    battleQueue[i].freezeBomb.interactable = true;
+                    battleQueue[i].AddHp.interactable = true;
+                    battleQueue[i].cardLimited = 2;
+                }
+                
                 battleQueue[i].AiStrategy();
 
                 break;
             }
+        }
+    }
+
+    public void LeaveBattle()
+    {
+        if (battleQueue.Count == 1)
+        {
+            if (battleQueue[0]._isPlayPawn)
+            {
+                battleQueue[0].attackOrder = -1;
+                battleQueue[0]._canOperate = true;
+                print("end battle");
+                PathFound pathFound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PathFound>();
+                pathFound.moveMode = PathFound.MoveMode.Normal;
+            }
+            
         }
     }
 }
