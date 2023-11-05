@@ -242,10 +242,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &46066862
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,10 +955,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &227133683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,10 +1097,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &243081411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,10 +1894,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &342593973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,10 +2703,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &528491580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,10 +3103,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &613969941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,10 +3455,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &650012919
 GameObject:
   m_ObjectHideFlags: 0
@@ -4152,6 +4264,10 @@ MonoBehaviour:
   playerPawn: {fileID: 2141390685}
   moveValue: {x: 0, y: 0, z: 0}
   cameraMode: 0
+  TargetHPInformation: {fileID: 0}
+  TargetHPSlider: {fileID: 0}
+  HPImage: {fileID: 0}
+  TargetHPUI: {fileID: 0}
 --- !u!114 &854810783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4270,10 +4386,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 0
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!120 &854810788
 LineRenderer:
   serializedVersion: 2
@@ -5902,10 +6034,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &1060797952
 GameObject:
   m_ObjectHideFlags: 0
@@ -6028,10 +6176,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &1104491870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6503,10 +6667,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &1162232623
 GameObject:
   m_ObjectHideFlags: 0
@@ -7355,10 +7535,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &1415356834
 GameObject:
   m_ObjectHideFlags: 0
@@ -7481,10 +7677,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &1436254523
 GameObject:
   m_ObjectHideFlags: 0
@@ -9551,8 +9763,8 @@ Transform:
   m_GameObject: {fileID: 1800799670}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.3, y: 85.7, z: 774.5}
-  m_LocalScale: {x: 91.683365, y: 91.683365, z: 91.683365}
+  m_LocalPosition: {x: 9.3, y: 70.74, z: 377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -9571,10 +9783,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &1816717899
 GameObject:
   m_ObjectHideFlags: 0
@@ -10119,10 +10347,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &1897558865
 GameObject:
   m_ObjectHideFlags: 0
@@ -10245,10 +10489,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 1
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1 &1935285616
 GameObject:
   m_ObjectHideFlags: 0
@@ -11197,10 +11457,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camp: 0
   CharacterName: 
-  health: 0
+  _damageType: 0
+  maxhealth: 0
+  currentHealth: 0
   attackValue: 0
   attackRadius: 0
+  attackCostPoint: 0
   speed: 0
+  defenceValue: 0
+  attackOrder: -1
+  _canOperate: 1
+  _isPlayPawn: 0
+  maxOperatePoint: 0
+  currentOperatePoint: 0
+  operatePoint: {fileID: 0}
+  actionFinish: 1
+  isBurned: 0
+  isFreeze: 0
+  hateTarget: {fileID: 0}
+  status:
+    _serializedList: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

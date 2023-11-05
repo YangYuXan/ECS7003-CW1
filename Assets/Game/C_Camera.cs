@@ -36,6 +36,7 @@ public class C_Camera : MonoBehaviour
     public Slider TargetHPSlider;
     public Image HPImage;
     public GameObject TargetHPUI;
+    public TextMeshProUGUI PlayerPawnHP;
 
 
     RaycastHit casHit;
@@ -61,6 +62,8 @@ public class C_Camera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        PlayerPawnHP.text = playerPawn.GetComponent<Character>().currentHealth.ToString() + "/" +
+                            playerPawn.GetComponent<Character>().maxhealth.ToString();
 
         transform.position += _moveDir;
 
@@ -153,34 +156,38 @@ public class C_Camera : MonoBehaviour
             if (!EventSystem.current.IsPointerOverGameObject())
             {
                 if (casHit.collider.gameObject.tag != "Character")
-                { 
-                    Transform spawnPoint = casHit.collider.gameObject.transform;
-                    Instantiate(targetPointMark, casHit.point, spawnPoint.rotation);
-                    if (GameObject.FindGameObjectWithTag("mark"))
-                    {
-                        Destroy(GameObject.FindGameObjectWithTag("mark"));
-                    }
-                    Instantiate(targetPointMark, casHit.point, spawnPoint.rotation);
+                {
+
                     Character component = playerPawn.gameObject.GetComponent<Character>();
+
+                    //计算导航总路径长度
+                    float totalLength = 0f;
+                    for (int i = 0; i < component.pathFound.lineRenderer.positionCount-1;i++)
+                    {
+                        Vector3 pointA = component.pathFound.lineRenderer.GetPosition(i);
+                        Vector3 pointB = component.pathFound.lineRenderer.GetPosition(i + 1);
+                        totalLength += Vector3.Distance(pointA, pointB);
+                    }
+
+                    component.totalLength = totalLength;
 
                     //-1 为未进入战斗模式
                     if (component.attackOrder == -1)
                     {
                         component.AI_MovetoPoint(casHit.point);
                     }
-                    //进入战斗
+                    //不为-1则表示处于战斗中，检测是否可以移动
                     else
                     {
                         if (component.GetCanOperate())
                         {
+
                             component.AI_MovetoPoint(casHit.point);
                         }
                     }
                 }
                 else
                 {
-                    Transform spawnPoint = casHit.collider.gameObject.transform;
-                    Instantiate(targetPointMark, casHit.point, spawnPoint.rotation);
                     Character component = playerPawn.gameObject.GetComponent<Character>();
                     //只有在选定了攻击模式后，才能打人
                     if (component.GetCharacterStatus()==Character.CharacterStatus.attack)
@@ -197,7 +204,7 @@ public class C_Camera : MonoBehaviour
                                 //Button 消失
                                 break;
                             case Character.DamageType.freeze:
-                                //
+                                //TODO 冰冻，减缓移动距离
                                 break;
 
                         }

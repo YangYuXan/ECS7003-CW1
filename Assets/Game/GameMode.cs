@@ -11,8 +11,8 @@ public class GameMode : MonoBehaviour
     private List<Character> battleQueue = new();
     //private Character[] canOperateRoles;
     private int _currentAttackIndex=0;
-    private bool _isPlayerTurn=true;
-    private bool _isBattle;
+    public bool _isPlayerTurn=false;
+    public bool _isBattle;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,8 +56,15 @@ public class GameMode : MonoBehaviour
         //将可战斗的角色按照敏捷从高往低排序
         battleQueue.Sort((a,b)=>b.speed.CompareTo(a.speed));
 
+        //判断起始回合的角色是否为玩家的回合
+        if (battleQueue[0]._isPlayPawn)
+        {
+            _isPlayerTurn = true;
+        }
+
         for (int i = 0; i < battleQueue.Count; i++)
         {
+
             //赋予角色攻击顺序
             battleQueue[i].attackOrder = i;
 
@@ -65,6 +72,7 @@ public class GameMode : MonoBehaviour
             if (i != 0)
             {
                 battleQueue[i].SetCanOperate(false);
+                
             }
             
         }
@@ -95,19 +103,24 @@ public class GameMode : MonoBehaviour
         return _currentAttackIndex;
     }
 
+
     public void SwitchNextCharacter()
     {
+        //处理UI效果
         if (_isPlayerTurn)
         {
-            //处理UI效果
-            turnEndButton.enabled=false;
+            turnEndButton.interactable = false;
             ColorBlock disableColor = new();
             disableColor.normalColor = new Color(0.75f, 0.75f, 0.75f,1);
             turnEndButton.colors = disableColor;
         }
 
+        //设定为当前结算角色不可移动
+        battleQueue[_currentAttackIndex]._canOperate = false;
+
+
         _currentAttackIndex++;
-        if (_currentAttackIndex > battleQueue.Count)
+        if (_currentAttackIndex > battleQueue.Count-1)
         {
             _currentAttackIndex = 0;
         }
@@ -118,7 +131,20 @@ public class GameMode : MonoBehaviour
             //角色非倒地，非死亡则符合行动
             if (!battleQueue[i].GetDeath() && !battleQueue[i].GetNearDeath())
             {
+                if (battleQueue[i]._isPlayPawn)
+                {
+                    _isPlayerTurn = true;
+                    turnEndButton.interactable=true;
+                }
+                else
+                {
+                    _isPlayerTurn = false;
+
+
+                }
+                battleQueue[i]._canOperate = true;
                 battleQueue[i].AiStrategy();
+
                 break;
             }
         }

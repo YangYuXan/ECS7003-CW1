@@ -6,6 +6,8 @@ using NUnit.Framework.Constraints;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.HID;
+using UnityEngine.UI;
 
 namespace CharacterCampSpace
 {
@@ -66,41 +68,53 @@ public class Character : MonoBehaviour
     public bool _canOperate = true;
     private bool _isNeardeath = false;
     private bool _isDeath = false;
-    private bool _isFallDown = false;
     public bool _isPlayPawn;
-    public float maxOperatePoint;
-    public float currentOperatePoint;
-    public TextMeshProUGUI operatePoint;
+    public float MaxMoveDistance;
+    public float RemainMoveDistance;
 
-    //AI Status
-    public bool actionFinish=true;
+    //UI element
+    public TextMeshProUGUI UI_MaxMoveDistance;
+    public TextMeshProUGUI UI_RemainMoveDistance;
+
 
     //Abnormal Status
     public bool isBurned=false;
     public bool isFreeze = false;
 
+    //For Game Develop
+    public float totalLength = 0f;
 
     private GameObject target;
     private Vector3 targetPosition;
     public GameObject hateTarget;
-    private PathFound pathFound;
-
-    //
-    [SerializedDictionary("Status", "result")]
-    public SerializedDictionary<string, bool> status;
+    public PathFound pathFound;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentOperatePoint = maxOperatePoint;
+        agent = GetComponent<NavMeshAgent>();
         pathFound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PathFound>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (UI_MaxMoveDistance != null && UI_RemainMoveDistance != null)
+        {
+            if (FindFirstObjectByType<GameMode>()._isBattle)
+            {
+                UI_MaxMoveDistance.text = "MaxMaxMoveDistance" + MaxMoveDistance;
+                UI_RemainMoveDistance.text = "UI_RemainMoveDistance" + RemainMoveDistance;
+            }
+            else
+            {
+                UI_MaxMoveDistance.text = "";
+                UI_RemainMoveDistance.text = "";
+            }
+        }
 
-        if (!_isNeardeath && !_isDeath||_canOperate)
+        if (!_isNeardeath && !_isDeath && _canOperate)
         {
             switch (moveStatus)
             {
@@ -109,18 +123,50 @@ public class Character : MonoBehaviour
 
                 case MoveStatus.move:
                     GetAgent();
-                    agent.SetDestination(targetPosition);
+                    agent.isStopped = false;
+                    if (FindFirstObjectByType<GameMode>()._isBattle)
+                    {
+                        RemainMoveDistance = MaxMoveDistance - (totalLength - agent.remainingDistance);
+                    }
+                    else
+                    {
+                        agent.stoppingDistance = 0;
+                    }
+
+                    if (agent.remainingDistance <= agent.stoppingDistance)
+                    {
+                        MaxMoveDistance = RemainMoveDistance;
+                        moveStatus = MoveStatus.idile;
+
+                        //玩家不应该触发这个,玩家由Button触发SwitchNextCharacter()
+                        if (!_isPlayPawn)
+                        {
+                            agent.isStopped = true;
+                            FindAnyObjectByType<GameMode>().SwitchNextCharacter();
+                        }
+                    }
                     agent.isStopped = false;
                     break;
 
                 case MoveStatus.moveAndAttack:
+                    GetAgent();
                     agent.isStopped = false;
-                    agent.SetDestination(target.transform.position);
-                    if (Vector3.Distance(transform.position, target.transform.position) < attackRadius)
+                    if (FindFirstObjectByType<GameMode>()._isBattle)
                     {
-                        agent.isStopped = true;
-                        ApplyDamage(target,_damageType);
+                        RemainMoveDistance = MaxMoveDistance - (totalLength - agent.remainingDistance);
+                        agent.stoppingDistance = attackRadius;
+                    }
+                    else
+                    {
+                        agent.stoppingDistance = 0;
+                    }
+
+                    if (Vector3.Distance(this.transform.position,target.transform.position) <= attackRadius)
+                    {
+                        MaxMoveDistance = RemainMoveDistance;
+                        ApplyDamage(target, _damageType);
                         moveStatus = MoveStatus.idile;
+                        agent.isStopped = true;
 
                         //玩家不应该触发这个,玩家由Button触发SwitchNextCharacter()
                         if (!_isPlayPawn)
@@ -129,11 +175,13 @@ public class Character : MonoBehaviour
                         }
                     }
                     break;
+
                 case MoveStatus.action:
                     if (_damageType == DamageType.fire)
                     {
                         ApplyDamage(target, _damageType);
                     }
+                    moveStatus = MoveStatus.idile;
                     break;
             }
         }
@@ -144,6 +192,25 @@ public class Character : MonoBehaviour
     {
         GetAgent();
         targetPosition = position;
+
+        if (FindFirstObjectByType<GameMode>()._isBattle)
+        {
+            if (totalLength <= RemainMoveDistance)
+            {
+                agent.stoppingDistance = 0;
+            }
+            //剩余路程不足以走完全程
+            else
+            {
+                agent.stoppingDistance = totalLength - RemainMoveDistance;
+            }
+        }
+        else
+        {
+            agent.stoppingDistance = 0;
+        }
+
+        agent.SetDestination(targetPosition);
         moveStatus = MoveStatus.move;
     }
 
@@ -151,13 +218,31 @@ public class Character : MonoBehaviour
     {
         GetAgent();
         target = enermy;
+
+        if (FindFirstObjectByType<GameMode>()._isBattle)
+        {
+            if (totalLength <= RemainMoveDistance)
+            {
+                agent.stoppingDistance = attackRadius;
+            }
+            //剩余路程不足以走完全程
+            else
+            {
+                agent.stoppingDistance = totalLength - RemainMoveDistance;
+            }
+        }
+        else
+        {
+            agent.stoppingDistance = 0;
+        }
+
+        agent.SetDestination(target.gameObject.transform.position);
         moveStatus = MoveStatus.moveAndAttack;
     }
 
     public void AI_UsingSkill(GameObject enermy)
     {
         GetAgent();
-        //TODO
         target = enermy;
         moveStatus = MoveStatus.action;
     }
@@ -170,13 +255,16 @@ public class Character : MonoBehaviour
     void SetHP(float dealValue)
     {
         currentHealth += dealValue;
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Destroy(this.gameObject);
+        }
     }
 
     void ApplyDamage(GameObject target, DamageType damageType)
     {
-        if (currentOperatePoint>attackCostPoint)
-        {
-            currentOperatePoint -= attackCostPoint;
+        
             switch (damageType)
             {
                 case DamageType.normal:
@@ -193,7 +281,7 @@ public class Character : MonoBehaviour
 
             //处理受伤事件
             target.GetComponent<Character>().RecvDamage(attackValue, this.gameObject);
-        }
+
     }
 
     void RecvDamage(float hurtValue,GameObject enermy)
@@ -314,11 +402,28 @@ public class Character : MonoBehaviour
         if (!_isPlayPawn)
         {
             CalcExtraHurt();
-            AI_Attack(hateTarget);
-            print("计算策略"+attackOrder);
-            //FindAnyObjectByType<GameMode>().SwitchNextCharacter();
 
+            //计算攻击距离是否足够满足一次性过去
+            NavMeshPath path = new NavMeshPath();
+            agent.CalculatePath(hateTarget.transform.position, path);
+            totalLength = 0f;
+            for (int i = 0; i < path.corners.Length - 1; i++)
+            {
+                Vector3 pointA = path.corners[i];
+                Vector3 pointB = path.corners[i + 1];
+                totalLength += Vector3.Distance(pointA, pointB);
+            }
+
+            if (totalLength <= RemainMoveDistance)
+            {
+                AI_Attack(hateTarget);
+            }
+            else
+            {
+                AI_MovetoPoint(hateTarget.transform.position);
+            }
         }
+
     }
 
     public void FireBomb()
@@ -326,4 +431,43 @@ public class Character : MonoBehaviour
         SetCharacterAttackStatus();
         _damageType = DamageType.fire;
     }
+
+    public void FreezeBomb()
+    {
+        SetCharacterAttackStatus();
+        _damageType = DamageType.freeze;
+    }
+
+    public void AddHP()
+    {
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Item")
+        {
+            Item buffItem = collision.gameObject.GetComponent<Item>();
+
+            if (buffItem.bufftype == Item.BuffType.AddSpeed)
+            {
+                speed += 5;
+            }
+
+            if (buffItem.bufftype == Item.BuffType.AddAttackValue)
+            {
+                attackValue += 5;
+            }
+
+            if (buffItem.bufftype == Item.BuffType.AddHP)
+            {
+                maxhealth += 30;
+                currentHealth += 30;
+            }
+
+            Destroy(collision.gameObject);
+        }
+    }
+
+
 }
