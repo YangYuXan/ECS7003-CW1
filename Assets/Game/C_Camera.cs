@@ -196,17 +196,21 @@ public class C_Camera : MonoBehaviour
                         {
                             case Character.DamageType.normal:
                                 component.AI_Attack(casHit.collider.gameObject);
-                                component.fireBomb.interactable = false;
-                                component.cardLimited--;
+                                component.AttackButton.interactable = false;
                                 break;
 
                             case Character.DamageType.fire:
                                 component.AI_UsingSkill(casHit.collider.gameObject);
-                                component.freezeBomb.interactable = false;
+                                component.fireBomb.interactable = false;
                                 component.cardLimited--;
                                 break;
                             case Character.DamageType.freeze:
                                 component.AI_UsingSkill(casHit.collider.gameObject);
+                                component.freezeBomb.interactable = false;
+                                component.cardLimited--;
+                                break;
+
+                            case Character.DamageType.addHP:
                                 component.AddHp.interactable = false;
                                 component.cardLimited--;
                                 break;

@@ -58,6 +58,7 @@ public class GameMode : MonoBehaviour
         if (battleQueue[0]._isPlayPawn)
         {
             _isPlayerTurn = true;
+            turnEndButton.interactable = true;
         }
 
         for (int i = 0; i < battleQueue.Count; i++)
@@ -108,6 +109,7 @@ public class GameMode : MonoBehaviour
         if (_isPlayerTurn)
         {
             turnEndButton.interactable = false;
+            battleQueue[_currentAttackIndex].AttackButton.interactable = false;
         }
 
         //设定为当前结算角色不可移动
@@ -130,7 +132,7 @@ public class GameMode : MonoBehaviour
                 {
                     _isPlayerTurn = true;
                     turnEndButton.interactable=true;
-
+                    battleQueue[i].AttackButton.interactable = true;
                 }
                 else
                 {
@@ -164,8 +166,17 @@ public class GameMode : MonoBehaviour
         {
             if (battleQueue[0]._isPlayPawn)
             {
+                _isBattle = false;
                 battleQueue[0].attackOrder = -1;
                 battleQueue[0]._canOperate = true;
+                battleQueue[0].UI_RemainMoveDistance.text = "";
+                battleQueue[0].UI_MaxMoveDistance.text = "";
+                battleQueue[0].fireBomb.interactable = true;
+                battleQueue[0].freezeBomb.interactable = true;
+                battleQueue[0].AddHp.interactable = true;
+                battleQueue[0].cardLimited = 2;
+                turnEndButton.interactable = false;
+                battleQueue[0].AttackButton.interactable = true;
                 print("end battle");
                 PathFound pathFound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PathFound>();
                 pathFound.moveMode = PathFound.MoveMode.Normal;

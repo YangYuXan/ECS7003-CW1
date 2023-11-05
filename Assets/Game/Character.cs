@@ -45,7 +45,8 @@ public class Character : MonoBehaviour
     {
         normal,
         fire,
-        freeze
+        freeze,
+        addHP
     }
 
     private NavMeshAgent agent;
@@ -79,6 +80,7 @@ public class Character : MonoBehaviour
     public Button fireBomb;
     public Button freezeBomb;
     public Button AddHp;
+    public Button AttackButton;
 
 
     //Abnormal Status
@@ -98,6 +100,7 @@ public class Character : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         pathFound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PathFound>();
+        FindFirstObjectByType<GameMode>().turnEndButton.interactable = false;
 
     }
 
@@ -180,7 +183,7 @@ public class Character : MonoBehaviour
                         agent.stoppingDistance = 0;
                     }
 
-                    if (Vector3.Distance(this.transform.position,target.transform.position) <= attackRadius)
+                    if (Vector3.Distance(transform.position,target.transform.position) <= attackRadius)
                     {
                         MaxMoveDistance = RemainMoveDistance;
                         ApplyDamage(target, _damageType);
@@ -197,6 +200,10 @@ public class Character : MonoBehaviour
 
                 case MoveStatus.action:
                     if (_damageType == DamageType.fire)
+                    {
+                        ApplyDamage(target, _damageType);
+                    }
+                    if(_damageType == DamageType.freeze)
                     {
                         ApplyDamage(target, _damageType);
                     }
@@ -355,6 +362,7 @@ public class Character : MonoBehaviour
     public void SetCharacterAttackStatus()
     {
         _characterStatus = CharacterStatus.attack;
+        _damageType = DamageType.normal;
     }
 
     public void SetCharacterNormalStatus()
@@ -461,7 +469,15 @@ public class Character : MonoBehaviour
 
     public void AddHP()
     {
-        currentHealth += 20;
+        if (currentHealth + 20 > maxhealth)
+        {
+            currentHealth = 100;
+            GetComponent<Renderer>().material.color = Color.white;
+        }
+        if (currentHealth + 20 < maxhealth)
+        {
+            currentHealth += 20;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
