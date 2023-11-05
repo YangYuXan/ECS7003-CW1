@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using CharacterCampSpace;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,6 +31,11 @@ public class GameMode : MonoBehaviour
         {
             if (Vector3.Distance(position, 
                     FindObjectsOfType<Character>()[i].transform.position)<50)
+            {
+                battleQueue.Add(FindObjectsOfType<Character>()[i]);
+            }
+            if (FindObjectsOfType<Character>()[i]._isPlayPawn&& Vector3.Distance(position,
+                    FindObjectsOfType<Character>()[i].transform.position) >= 50)
             {
                 battleQueue.Add(FindObjectsOfType<Character>()[i]);
             }

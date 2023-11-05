@@ -126,8 +126,8 @@ public class Character : MonoBehaviour
         {
             if (FindFirstObjectByType<GameMode>()._isBattle)
             {
-                UI_MaxMoveDistance.text = "MaxMaxMoveDistance" + MaxMoveDistance;
-                UI_RemainMoveDistance.text = "UI_RemainMoveDistance" + RemainMoveDistance;
+                UI_MaxMoveDistance.text = "MaxMaxMoveDistance: " + MaxMoveDistance+"m";
+                UI_RemainMoveDistance.text = "UI_RemainMoveDistance: " + RemainMoveDistance+"m";
             }
             else
             {
@@ -189,7 +189,7 @@ public class Character : MonoBehaviour
                         ApplyDamage(target, _damageType);
                         moveStatus = MoveStatus.idile;
                         agent.isStopped = true;
-
+                        _characterStatus=CharacterStatus.normal;
                         //玩家不应该触发这个,玩家由Button触发SwitchNextCharacter()
                         if (!_isPlayPawn)
                         {
@@ -469,7 +469,8 @@ public class Character : MonoBehaviour
 
     public void AddHP()
     {
-        if (currentHealth + 20 > maxhealth)
+        print("add");
+        if (currentHealth + 20 >= maxhealth)
         {
             currentHealth = 100;
             GetComponent<Renderer>().material.color = Color.white;
@@ -478,6 +479,8 @@ public class Character : MonoBehaviour
         {
             currentHealth += 20;
         }
+        cardLimited--;
+        AddHp.interactable = false;
     }
 
     private void OnCollisionEnter(Collision collision)
