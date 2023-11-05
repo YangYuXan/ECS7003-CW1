@@ -71,7 +71,7 @@ public class C_Camera : MonoBehaviour
         Debug.DrawRay(transform.position, ray.direction * 200, Color.red);
         if (Physics.Raycast(ray, out casHit))
         {
-            //移动到人物上时出现血条
+            //A health bar appears when moving onto a character
             if (casHit.collider.gameObject.tag == "Character")
             {
                 TargetHPUI.SetActive(true);
@@ -160,7 +160,7 @@ public class C_Camera : MonoBehaviour
 
                     Character component = playerPawn.gameObject.GetComponent<Character>();
 
-                    //计算导航总路径长度
+                    //Calculate total navigation path length
                     float totalLength = 0f;
                     for (int i = 0; i < component.pathFound.lineRenderer.positionCount-1;i++)
                     {
@@ -171,12 +171,12 @@ public class C_Camera : MonoBehaviour
 
                     component.totalLength = totalLength;
 
-                    //-1 为未进入战斗模式
+                    //If attackOrder is -1, it means that the character is not in combat and will not participate in the round settlement.
                     if (component.attackOrder == -1)
                     {
                         component.AI_MovetoPoint(casHit.point);
                     }
-                    //不为-1则表示处于战斗中，检测是否可以移动
+                    //If it is not -1, it means that you are in combat. Determine whether you can move based on the value of GetCanOperate().
                     else
                     {
                         if (component.GetCanOperate())
@@ -189,7 +189,7 @@ public class C_Camera : MonoBehaviour
                 else
                 {
                     Character component = playerPawn.gameObject.GetComponent<Character>();
-                    //只有在选定了攻击模式后，才能打人
+                    //You can only hit someone after selecting the attack mode
                     if (component.GetCharacterStatus()==Character.CharacterStatus.attack)
                     {
                         switch (component._damageType)

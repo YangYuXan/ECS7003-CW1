@@ -25,6 +25,14 @@ public class GameMode : MonoBehaviour
         
     }
 
+    /*
+     *  When an NPC is injured, it will prepare to enter combat mode. Before the battle begins,
+     *  all characters that meet the conditions need to enter the combat sequence. The specific conditions are:
+     *  within a radius of 50 from the attacked person, and in the same camp as the attacked person.
+     *  People, as well as all people of the same alignment as the attacker, will enter the order of battle.
+     *
+     *  @param position : The location of the attacker
+     */
     public void GenerateQueue(Vector3 position, CharacterCamp camp,GameObject inital )
     {
         for(int i=0;i<FindObjectsOfType<Character>().Length;i++)
@@ -57,10 +65,10 @@ public class GameMode : MonoBehaviour
 
     public void CalcAttackOrder()
     {
-        //将可战斗的角色按照敏捷从高往低排序
+        //Sort combatable characters in order of agility from high to low
         battleQueue.Sort((a,b)=>b.speed.CompareTo(a.speed));
 
-        //判断起始回合的角色是否为玩家的回合
+        //Determine whether the character in the starting round is the player's turn
         if (battleQueue[0]._isPlayPawn)
         {
             _isPlayerTurn = true;
@@ -70,10 +78,10 @@ public class GameMode : MonoBehaviour
         for (int i = 0; i < battleQueue.Count; i++)
         {
 
-            //赋予角色攻击顺序
+            //Assign attack order to characters
             battleQueue[i].attackOrder = i;
 
-            //让一号位角色获取行动权
+            //Let the first character gain the right to act
             if (i != 0)
             {
                 battleQueue[i].SetCanOperate(false);
@@ -81,7 +89,7 @@ public class GameMode : MonoBehaviour
             }
             
         }
-        //当一号机不是玩家控制时，让一号机开始行动
+        //When first is not controlled by the player, let first start using AiStrategy()
         if (!battleQueue[0]._isPlayPawn)
         {
             battleQueue[0].AiStrategy();
@@ -108,17 +116,19 @@ public class GameMode : MonoBehaviour
         return _currentAttackIndex;
     }
 
-
+    /*
+     *  At the end of the round, switch to the next character
+     */
     public void SwitchNextCharacter()
     {
-        //处理UI效果
+        //Handle UI effects
         if (_isPlayerTurn)
         {
             turnEndButton.interactable = false;
             battleQueue[_currentAttackIndex].AttackButton.interactable = false;
         }
 
-        //设定为当前结算角色不可移动
+        //The current settlement character is set to be immovable.
         battleQueue[_currentAttackIndex]._canOperate = false;
 
 
@@ -128,10 +138,11 @@ public class GameMode : MonoBehaviour
             _currentAttackIndex = 0;
         }
 
-        //获取队列中下一位可以战斗的角色
+        //Get the next character in the queue who can fight
         for (int i = _currentAttackIndex; i < battleQueue.Count; i++)
         {
-            //角色非倒地，非死亡则符合行动
+            //If the character does not fall to the ground or dies, it complies with the action.
+
             if (!battleQueue[i].GetDeath() && !battleQueue[i].GetNearDeath())
             {
                 if (battleQueue[i]._isPlayPawn)
@@ -166,6 +177,9 @@ public class GameMode : MonoBehaviour
         }
     }
 
+    /*
+     * When all enemies are eliminated, exit combat mode
+     */
     public void LeaveBattle()
     {
         if (battleQueue.Count == 1)

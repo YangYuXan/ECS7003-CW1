@@ -160,7 +160,7 @@ public class Character : MonoBehaviour
                         MaxMoveDistance = RemainMoveDistance;
                         moveStatus = MoveStatus.idile;
 
-                        //玩家不应该触发这个,玩家由Button触发SwitchNextCharacter()
+                        //After the npc completes the behavior, execute SwitchNextCharacter()
                         if (!_isPlayPawn)
                         {
                             agent.isStopped = true;
@@ -190,7 +190,7 @@ public class Character : MonoBehaviour
                         moveStatus = MoveStatus.idile;
                         agent.isStopped = true;
                         _characterStatus=CharacterStatus.normal;
-                        //玩家不应该触发这个,玩家由Button触发SwitchNextCharacter()
+                        //After the npc completes the behavior, execute SwitchNextCharacter()
                         if (!_isPlayPawn)
                         {
                             FindAnyObjectByType<GameMode>().SwitchNextCharacter();
@@ -213,7 +213,14 @@ public class Character : MonoBehaviour
         }
         
     }
-
+    /*
+     *  The character will move closer to the target point. In combat mode,
+     *  the distance moved each round is fixed. When the remaining moving distance
+     *  is greater than the total distance, the character will move to the target point.
+     *  If it is not enough, it will stop halfway.
+     *
+     *  @param : Target location
+     */
     public void AI_MovetoPoint(Vector3 position)
     {
         GetAgent();
@@ -225,7 +232,7 @@ public class Character : MonoBehaviour
             {
                 agent.stoppingDistance = 0;
             }
-            //剩余路程不足以走完全程
+            //There is not enough distance left to complete the journey
             else
             {
                 agent.stoppingDistance = totalLength - RemainMoveDistance;
@@ -240,6 +247,15 @@ public class Character : MonoBehaviour
         moveStatus = MoveStatus.move;
     }
 
+    /*
+     * The character will move closer to the target point and then launch an attack.
+     * In combat mode, the distance moved each round is fixed. When the remaining movement distance
+     * is greater than the total distance, the character will move to the target point and then attack.
+     * If it is not enough, it will stop halfway.
+     *
+     *  @param : Attack Target
+     */
+
     public void AI_Attack(GameObject enermy)
     {
         GetAgent();
@@ -251,7 +267,7 @@ public class Character : MonoBehaviour
             {
                 agent.stoppingDistance = attackRadius;
             }
-            //剩余路程不足以走完全程
+            //There is not enough distance left to complete the journey
             else
             {
                 agent.stoppingDistance = totalLength - RemainMoveDistance;
@@ -265,7 +281,11 @@ public class Character : MonoBehaviour
         agent.SetDestination(target.gameObject.transform.position);
         moveStatus = MoveStatus.moveAndAttack;
     }
-
+    /*
+     * This function is called when the character attempts to use a card with damage
+     *
+     * @param : Attack Target
+     */
     public void AI_UsingSkill(GameObject enermy)
     {
         GetAgent();
@@ -290,6 +310,14 @@ public class Character : MonoBehaviour
         }
     }
 
+    /*
+     *  This function is called when the character tries to cause damage to the enemy.
+     *  Different DamageType will give different debuffs to the enemy.
+     *  If you need to extend the damage type, add an enum in enum DamageType
+     *
+     *@param target: Attack Target
+     *@param damageType : damage Type inlude normal attack，fire, freeze.
+     */
     void ApplyDamage(GameObject target, DamageType damageType)
     {
         
@@ -307,11 +335,21 @@ public class Character : MonoBehaviour
                     break;
             }
 
-            //处理受伤事件
             target.GetComponent<Character>().RecvDamage(attackValue, this.gameObject);
 
     }
 
+    /*
+     *  This function will be called when the character is injured and attacked,
+     *  but the character may not be injured. When the attacker's attack power is higher than the target character's defense,
+     *  he will definitely be injured. When the attack power is less than the defense,
+     *  the injury is a probability. event. In addition, if the person being attacked is not in combat,
+     *  he, his companions, and the initiator of the attack will all be dragged into the battle,
+     *  and the order of attacks will be determined based on everyone's speed.
+     *
+     *  @param hurtValue : hurt Value
+     *  @param enermy : Attacker
+     */
     void RecvDamage(float hurtValue,GameObject enermy)
     {
         //通知伙伴加入战斗,处于战斗状态了则不需要通知
@@ -325,9 +363,9 @@ public class Character : MonoBehaviour
             gameMode.SetBattle(true);
             pathFound.moveMode = PathFound.MoveMode.TurnMode;
 
-        } 
+        }
 
-        //roll点判定是否会造成伤害
+        //Roll points determine whether damage will be caused
         if (defenceValue > hurtValue)
         {
             float randomValue = Random.Range(0f, 100f);
@@ -346,7 +384,7 @@ public class Character : MonoBehaviour
         else
         {
             SetHP(hurtValue * -1);
-            //变色模拟受伤
+            //Discoloration simulates injury
             GetComponent<Renderer>().material.color = Color.red;
             if (currentHealth <= 0)
             {
@@ -411,7 +449,7 @@ public class Character : MonoBehaviour
         return _isNeardeath;
     }
 
-    //角色开始前计算附加伤害，例如冰冻、火焰
+    //Calculate additional damage, such as freezing, fire, before the character starts taking action
     public void CalcExtraHurt()
     {
         if (isBurned)
@@ -425,14 +463,20 @@ public class Character : MonoBehaviour
         }
     }
 
+    /*
+     *  The NPC generates a strategy when acting.
+     * If it can come within the attack range,
+     * it will attack, otherwise it will move towards the target.
+     */
+
     public void AiStrategy()
     {
-        //如果不是玩家控制的，则进行策略
+        //Planning if not player controlled
         if (!_isPlayPawn)
         {
             CalcExtraHurt();
 
-            //计算攻击距离是否足够满足一次性过去
+            //Calculate whether the attack distance is enough to meet the remaining movement distance of this round
             NavMeshPath path = new NavMeshPath();
             agent.CalculatePath(hateTarget.transform.position, path);
             totalLength = 0f;

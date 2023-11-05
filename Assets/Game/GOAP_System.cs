@@ -32,10 +32,10 @@ public class GOAPPlanner
 {
     public List<Action> Plan(List<Action> availableActions, Goal goal, WorldState currentState)
     {
-        // 实现GOAP算法，生成计划
+
         List<Action> plan = new List<Action>();
 
-        // 示例：简单地选择第一个可用动作作为计划
+
         if (availableActions.Count > 0)
         {
             plan.Add(availableActions[0]);
