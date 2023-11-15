@@ -1,5 +1,8 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using Camera = UnityEngine.Camera;
 
 public class C_Camera : MonoBehaviour
@@ -8,7 +11,7 @@ public class C_Camera : MonoBehaviour
     {
         freedom,
         track,
-        clockwiseRotate, 
+        clockwiseRotate,
         anticlockwiseRotation,
         freeRotate,
         zoom,
@@ -18,7 +21,7 @@ public class C_Camera : MonoBehaviour
     public GameObject targetPointMark;
     public GameObject playerPawn;
 
-    public Vector3 moveValue = new Vector3(0,0,0);
+    public Vector3 moveValue = new Vector3(0, 0, 0);
     public CameraMode cameraMode = CameraMode.freedom;
     float _duration = 10f;
     private float _duration_Zoom = 0.5f;
@@ -28,6 +31,13 @@ public class C_Camera : MonoBehaviour
     private float _y_distance;
     private float _z_distance;
     private float _rotateDegree;
+
+    public TextMeshProUGUI TargetHPInformation;
+    public Slider TargetHPSlider;
+    public Image HPImage;
+    public GameObject TargetHPUI;
+    public TextMeshProUGUI PlayerPawnHP;
+
 
     RaycastHit casHit;
 
@@ -39,73 +49,91 @@ public class C_Camera : MonoBehaviour
         camera = GetComponent<Camera>();
         var ray = new Ray(transform.position, transform.forward);
         Physics.Raycast(ray, out casHit);
-        _y_distance = (transform.position.y - casHit.point.y)/15;
-        _z_distance = (transform.position.z - casHit.point.z)/15;
-        _rotateDegree = (transform.rotation.x-5) / 3;
+        _y_distance = (transform.position.y - casHit.point.y) / 15;
+        _z_distance = (transform.position.z - casHit.point.z) / 15;
+        _rotateDegree = (transform.rotation.x - 5) / 3;
         print(_rotateDegree);
+        
+
+        //FindAnyObjectByType()
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        PlayerPawnHP.text = playerPawn.GetComponent<Character>().currentHealth.ToString() + "/" +
+                            playerPawn.GetComponent<Character>().maxhealth.ToString();
 
         transform.position += _moveDir;
 
-        switch (cameraMode)
+        var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Debug.DrawRay(transform.position, ray.direction * 200, Color.red);
+        if (Physics.Raycast(ray, out casHit))
         {
-            case CameraMode.clockwiseRotate:
-                if (casHit.collider.gameObject!=null)
-                {
-                    transform.RotateAround(casHit.point, casHit.collider.gameObject.transform.up, 3);
-                }
-                break;
+            //A health bar appears when moving onto a character
+            if (casHit.collider.gameObject.tag == "Character")
+            {
+                TargetHPUI.SetActive(true);
+                Character showCharacter = casHit.collider.gameObject.GetComponent<Character>();
+                TargetHPInformation.text =
+                    showCharacter.currentHealth.ToString() + "/" + showCharacter.maxhealth.ToString();
+                HPImage.fillAmount = showCharacter.currentHealth / showCharacter.maxhealth;
+            }
+            else
+            {
+                TargetHPUI.SetActive(false);
+            }
 
-            case CameraMode.anticlockwiseRotation:
-                if (casHit.collider.gameObject != null)
-                {
-                    transform.RotateAround(casHit.point, casHit.collider.gameObject.transform.up, -3);
-                }
-                break;
+        }
 
-            case CameraMode.track:
-                if (_timer < _duration - 9.3)
-                { 
-                    float t = _timer / _duration;
-                    transform.position = Vector3.Lerp(transform.position,
-                        new Vector3(casHit.collider.gameObject.transform.position.x, transform.position.y, casHit.collider.gameObject.transform.position.y), t);
-                    _timer += Time.deltaTime;
-                }
-                else if (Vector3.Distance(transform.position, casHit.collider.gameObject.transform.position) < 20)
-                {
-                    cameraMode = CameraMode.freedom;
-                    _timer = 0;
-                }
-                break;
+        switch (cameraMode)
+            {
+                case CameraMode.clockwiseRotate:
+                    transform.Rotate(Vector3.up, 3, Space.World);
+                    break;
 
-            case CameraMode.zoom:
-                Vector3 position_buff = new Vector3(0, _y_distance, _z_distance);
-                if (_timer < _duration_Zoom)
-                { 
-                    float t = _timer / _duration_Zoom;
-                    transform.position = Vector3.Lerp(transform.position, transform.position - position_buff, t);
-                    _timer += 0.1f;
-                }
-                break;
+                case CameraMode.anticlockwiseRotation:
+                    transform.Rotate(Vector3.up, -3, Space.World);
+                    break;
 
-            case CameraMode.zoom_out:
-                break;
+                case CameraMode.track:
+                    if (_timer < _duration - 9.3)
+                    {
+                        float t = _timer / _duration;
+                        transform.position = Vector3.Lerp(transform.position,
+                            new Vector3(casHit.collider.gameObject.transform.position.x, transform.position.y,
+                                casHit.collider.gameObject.transform.position.y), t);
+                        _timer += Time.deltaTime;
+                    }
+                    else if (Vector3.Distance(transform.position, casHit.collider.gameObject.transform.position) < 20)
+                    {
+                        cameraMode = CameraMode.freedom;
+                        _timer = 0;
+                    }
 
-            case CameraMode.freeRotate:
-                transform.Rotate(0, Mouse.current.delta.ReadValue().x, 0, Space.World);
-                break;
+                    break;
 
-            case CameraMode.freedom:
-                /*
-                var ray = new Ray(transform.position, transform.forward);
-                Physics.Raycast(ray, out casHit);
-                Debug.DrawRay(transform.position, ray.direction * 200, Color.red);
-                */
-                break;
+                case CameraMode.zoom:
+                    Vector3 position_buff = new Vector3(0, _y_distance, _z_distance);
+                    if (_timer < _duration_Zoom)
+                    {
+                        float t = _timer / _duration_Zoom;
+                        transform.position = Vector3.Lerp(transform.position, transform.position - position_buff, t);
+                        _timer += 0.1f;
+                    }
+
+                    break;
+
+                case CameraMode.zoom_out:
+                    break;
+
+                case CameraMode.freeRotate:
+                    transform.Rotate(0, Mouse.current.delta.ReadValue().x, 0, Space.World);
+                    break;
+
+                case CameraMode.freedom:
+                    break;
         }
 
     }
@@ -114,59 +142,99 @@ public class C_Camera : MonoBehaviour
     {
         moveValue.z = value.Get<Vector2>().y;
         moveValue.x = value.Get<Vector2>().x;
-        _moveDir = new Vector3(transform.forward.x, 0, transform.forward.z) * moveValue.z + transform.right * moveValue.x;
+        _moveDir = new Vector3(transform.forward.x, 0, transform.forward.z) * moveValue.z +
+                   transform.right * moveValue.x;
     }
 
     void OnInteract()
     {
 
         var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        
-
-        Debug.DrawRay(transform.position, ray.direction*200, Color.red);
 
         if (Physics.Raycast(ray, out casHit))
         {
-            if (casHit.collider.gameObject.tag != "Character")
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                Transform spawnPoint = casHit.collider.gameObject.transform;
-                Instantiate(targetPointMark, casHit.point, spawnPoint.rotation);
-                Character component =playerPawn.gameObject.GetComponent<Character>();
-                component.AI_MovetoPoint(casHit.point);
-                
-            }
-            else
-            {
-                Transform spawnPoint = casHit.collider.gameObject.transform;
-                Instantiate(targetPointMark, casHit.point, spawnPoint.rotation);
-                Character component = playerPawn.gameObject.GetComponent<Character>();
-                component.AI_Attack(casHit.collider.gameObject);
-            }
+                if (casHit.collider.gameObject.tag != "Character")
+                {
 
+                    Character component = playerPawn.gameObject.GetComponent<Character>();
+
+                    //Calculate total navigation path length
+                    float totalLength = 0f;
+                    for (int i = 0; i < component.pathFound.lineRenderer.positionCount-1;i++)
+                    {
+                        Vector3 pointA = component.pathFound.lineRenderer.GetPosition(i);
+                        Vector3 pointB = component.pathFound.lineRenderer.GetPosition(i + 1);
+                        totalLength += Vector3.Distance(pointA, pointB);
+                    }
+
+                    component.totalLength = totalLength;
+
+                    //If attackOrder is -1, it means that the character is not in combat and will not participate in the round settlement.
+                    if (component.attackOrder == -1)
+                    {
+                        component.AI_MovetoPoint(casHit.point);
+                    }
+                    //If it is not -1, it means that you are in combat. Determine whether you can move based on the value of GetCanOperate().
+                    else
+                    {
+                        if (component.GetCanOperate())
+                        {
+
+                            component.AI_MovetoPoint(casHit.point);
+                        }
+                    }
+                }
+                else
+                {
+                    Character component = playerPawn.gameObject.GetComponent<Character>();
+                    //You can only hit someone after selecting the attack mode
+                    if (component.GetCharacterStatus()==Character.CharacterStatus.attack)
+                    {
+                        switch (component._damageType)
+                        {
+                            case Character.DamageType.normal:
+                                component.AI_Attack(casHit.collider.gameObject);
+                                component.AttackButton.interactable = false;
+                                break;
+
+                            case Character.DamageType.fire:
+                                component.AI_UsingSkill(casHit.collider.gameObject);
+                                component.fireBomb.interactable = false;
+                                component.cardLimited--;
+                                break;
+                            case Character.DamageType.freeze:
+                                component.AI_UsingSkill(casHit.collider.gameObject);
+                                component.freezeBomb.interactable = false;
+                                component.cardLimited--;
+                                break;
+
+                            case Character.DamageType.addHP:
+                                component.AddHp.interactable = false;
+                                component.cardLimited--;
+                                break;
+
+                        }
+                        
+                    }
+                }
+
+            }
         }
     }
 
     void OnCameraRotate(InputValue value)
     {
-        if (value.Get<Vector2>().y!=0)
+        if (value.Get<Vector2>().y != 0)
         {
-            print("rotate");
-            var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (value.Get<Vector2>().y > 0)
-            {
-                Physics.Raycast(ray, out casHit);
-                cameraMode = CameraMode.clockwiseRotate;
-            }
-            else
-            {
-                Physics.Raycast(ray, out casHit);
-                cameraMode = CameraMode.anticlockwiseRotation;
-            }
-            
+            cameraMode = value.Get<Vector2>().y > 0
+                ? cameraMode = CameraMode.clockwiseRotate
+                : cameraMode = CameraMode.anticlockwiseRotation;
+
         }
         else
         {
-            print("stop");
             cameraMode = CameraMode.freedom;
         }
     }
@@ -177,23 +245,10 @@ public class C_Camera : MonoBehaviour
         {
             cameraMode = CameraMode.zoom_out;
         }
-        else if(value.Get<Vector2>().y < 0)
+        else if (value.Get<Vector2>().y < 0)
         {
             cameraMode = CameraMode.zoom;
         }
-        //if (value.Get<Vector2>().y > 0)
-        //{
-        //    Vector3 position_buff = new Vector3(0, _y_distance, _z_distance);
-        //    transform.position = transform.position-position_buff;
-        //    transform.Rotate(new Vector3(_rotateDegree, 0,0), Space.World);
-        //}
-        //else if (value.Get<Vector2>().y < 0)
-        //{
-        //    float rotation_x_buff = transform.rotation.x + _rotateDegree;
-        //    Vector3 position_buff = new Vector3(0, _y_distance, _z_distance);
-        //    transform.position += position_buff;
-        //}
-
     }
 
     void OnRotate(InputValue value)
@@ -207,5 +262,6 @@ public class C_Camera : MonoBehaviour
             cameraMode = CameraMode.freedom;
         }
     }
+
 
 }

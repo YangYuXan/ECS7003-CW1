@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - jit
   - Character
   - Terrain
+  - mark
+  - Item
   layers:
   - Default
   - TransparentFX
