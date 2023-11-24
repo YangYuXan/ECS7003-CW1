@@ -12,6 +12,7 @@ public class FunctionLibrary : MonoBehaviour
 
     public void AI_Move(NavMeshAgent agent,Vector3 Location)
     {
+        
         agent.SetDestination(Location);
     }
 

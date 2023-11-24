@@ -60,7 +60,7 @@ public class C_Camera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         PlayerPawnHP.text = playerPawn.GetComponent<Character>().currentHealth.ToString() + "/" +
                             playerPawn.GetComponent<Character>().maxhealth.ToString();

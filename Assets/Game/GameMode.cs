@@ -160,6 +160,7 @@ public class GameMode : MonoBehaviour
 
                 battleQueue[i].MaxMoveDistance = 20;
                 battleQueue[i].RemainMoveDistance = 20;
+                battleQueue[i].totalDistance = 0;
                 battleQueue[i]._canOperate = true;
                 if (battleQueue[i].fireBomb != null && battleQueue[i].freezeBomb != null &&
                     battleQueue[i].AddHp != null)
@@ -203,5 +204,10 @@ public class GameMode : MonoBehaviour
             }
             
         }
+    }
+
+    public void RestoreToinitialState(Character character)
+    {
+
     }
 }

@@ -19,7 +19,6 @@ public class PathFound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -33,6 +32,7 @@ public class PathFound : MonoBehaviour
             case MoveMode.TurnMode:
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
+                List<Vector3> road = new();
 
                 if (Physics.Raycast(ray, out hit))
                 {
@@ -41,8 +41,18 @@ public class PathFound : MonoBehaviour
                     agent.CalculatePath(hit.point, path);
 
                     // 更新LineRenderer来显示路径
-                    lineRenderer.positionCount = path.corners.Length;
-                    lineRenderer.SetPositions(path.corners);
+                    //lineRenderer.positionCount = path.corners.Length;
+                    //lineRenderer.SetPositions(path.corners);
+
+                    
+                    for (int i = 0; i < path.corners.Length; i++)
+                    {
+                        road.Add(new Vector3(path.corners[i].x, path.corners[i].y+.8f, path.corners[i].z));
+                    }
+
+                    lineRenderer.positionCount = road.Count;
+                    lineRenderer.SetPositions(road.ToArray());
+
                 }
                 break;
         }

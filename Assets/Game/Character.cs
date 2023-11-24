@@ -53,7 +53,7 @@ public class Character : MonoBehaviour
     public CharacterCamp camp;
     public string CharacterName;
 
-    private MoveStatus moveStatus = MoveStatus.idile;
+    public MoveStatus moveStatus = MoveStatus.idile;
     private CharacterStatus _characterStatus = CharacterStatus.normal;
     public DamageType _damageType = DamageType.normal;
 
@@ -72,6 +72,7 @@ public class Character : MonoBehaviour
     public float MaxMoveDistance;
     public float RemainMoveDistance;
     public int cardLimited = 2;
+    public float RoundMoveDistance;
 
     //UI element
     public TextMeshProUGUI UI_MaxMoveDistance;
@@ -89,6 +90,9 @@ public class Character : MonoBehaviour
 
     //For Game Develop
     public float totalLength = 0f;
+    public float totalDistance;
+    private Vector3 lastPosition;
+
 
     private GameObject target;
     private Vector3 targetPosition;
@@ -101,7 +105,7 @@ public class Character : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         pathFound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PathFound>();
         FindFirstObjectByType<GameMode>().turnEndButton.interactable = false;
-
+        lastPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -145,11 +149,29 @@ public class Character : MonoBehaviour
 
                 case MoveStatus.move:
                     GetAgent();
-                    agent.isStopped = false;
+
                     if (FindFirstObjectByType<GameMode>()._isBattle)
                     {
-                        RemainMoveDistance = MaxMoveDistance - (totalLength - agent.remainingDistance);
+                        //RemainMoveDistance = MaxMoveDistance - (totalLength - agent.remainingDistance);
+
+                        if (totalDistance >= RoundMoveDistance)
+                        {
+                            agent.isStopped = true;
+                        }
+
+                        // 计算当前帧移动的距离
+                        float distanceThisFrame = Vector3.Distance(lastPosition, transform.position);
+
+                        // 累加总距离
+                        totalDistance += distanceThisFrame;
+                        RemainMoveDistance -= distanceThisFrame;
+
+                        // 更新上一帧的位置
+                        lastPosition = transform.position;
+                        //print("移动了："+ totalDistance);
+
                     }
+
                     else
                     {
                         agent.stoppingDistance = 0;
@@ -167,7 +189,6 @@ public class Character : MonoBehaviour
                             FindAnyObjectByType<GameMode>().SwitchNextCharacter();
                         }
                     }
-                    agent.isStopped = false;
                     break;
 
                 case MoveStatus.moveAndAttack:
@@ -175,8 +196,24 @@ public class Character : MonoBehaviour
                     agent.isStopped = false;
                     if (FindFirstObjectByType<GameMode>()._isBattle)
                     {
-                        RemainMoveDistance = MaxMoveDistance - (totalLength - agent.remainingDistance);
-                        agent.stoppingDistance = attackRadius;
+                        //RemainMoveDistance = MaxMoveDistance - (totalLength - agent.remainingDistance);
+
+                        if (totalDistance >= RoundMoveDistance)
+                        {
+                            agent.isStopped = true;
+                        }
+
+                        // 计算当前帧移动的距离
+                        float distanceThisFrame = Vector3.Distance(lastPosition, transform.position);
+
+                        // 累加总距离
+                        totalDistance += distanceThisFrame;
+                        RemainMoveDistance -= distanceThisFrame;
+
+                        // 更新上一帧的位置
+                        lastPosition = transform.position;
+
+                        //agent.stoppingDistance = attackRadius;
                     }
                     else
                     {
@@ -190,6 +227,7 @@ public class Character : MonoBehaviour
                         moveStatus = MoveStatus.idile;
                         agent.isStopped = true;
                         _characterStatus=CharacterStatus.normal;
+
                         //After the npc completes the behavior, execute SwitchNextCharacter()
                         if (!_isPlayPawn)
                         {
@@ -197,6 +235,8 @@ public class Character : MonoBehaviour
                         }
                     }
                     break;
+
+
 
                 case MoveStatus.action:
                     if (_damageType == DamageType.fire)
@@ -225,26 +265,9 @@ public class Character : MonoBehaviour
     {
         GetAgent();
         targetPosition = position;
-
-        if (FindFirstObjectByType<GameMode>()._isBattle)
-        {
-            if (totalLength <= RemainMoveDistance)
-            {
-                agent.stoppingDistance = 0;
-            }
-            //There is not enough distance left to complete the journey
-            else
-            {
-                agent.stoppingDistance = totalLength - RemainMoveDistance;
-            }
-        }
-        else
-        {
-            agent.stoppingDistance = 0;
-        }
-
         agent.SetDestination(targetPosition);
         moveStatus = MoveStatus.move;
+        agent.isStopped = false;
     }
 
     /*
@@ -260,26 +283,9 @@ public class Character : MonoBehaviour
     {
         GetAgent();
         target = enermy;
-
-        if (FindFirstObjectByType<GameMode>()._isBattle)
-        {
-            if (totalLength <= RemainMoveDistance)
-            {
-                agent.stoppingDistance = attackRadius;
-            }
-            //There is not enough distance left to complete the journey
-            else
-            {
-                agent.stoppingDistance = totalLength - RemainMoveDistance;
-            }
-        }
-        else
-        {
-            agent.stoppingDistance = 0;
-        }
-
         agent.SetDestination(target.gameObject.transform.position);
         moveStatus = MoveStatus.moveAndAttack;
+        agent.stoppingDistance = attackRadius;
     }
     /*
      * This function is called when the character attempts to use a card with damage
