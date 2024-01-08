@@ -57,6 +57,8 @@ public class Character : MonoBehaviour
     private CharacterStatus _characterStatus = CharacterStatus.normal;
     public DamageType _damageType = DamageType.normal;
 
+    public Animator animator;
+
     //Character Property
     public float maxhealth;
     public float currentHealth;
@@ -73,11 +75,18 @@ public class Character : MonoBehaviour
     public float RemainMoveDistance;
     public int cardLimited = 2;
     public float RoundMoveDistance;
+    public int ammo=0;
+    public bool hasWeapon;
+    public GameObject weapon;
+
+    public Animation animation;
+    public bool needBan;
 
     //UI element
     public TextMeshProUGUI UI_MaxMoveDistance;
     public TextMeshProUGUI UI_RemainMoveDistance;
     public TextMeshProUGUI UI_CardLimited;
+    public TextMeshProUGUI UI_Ammo;
     public Button fireBomb;
     public Button freezeBomb;
     public Button AddHp;
@@ -102,15 +111,28 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         pathFound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PathFound>();
         FindFirstObjectByType<GameMode>().turnEndButton.interactable = false;
         lastPosition = transform.position;
+        animator.SetBool("isMove", false);
+        weapon.active = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        UI_Ammo.text = "ammo: " + ammo;
+        if (agent.velocity.magnitude != 0f)
+        {
+            animator.SetBool("isMove", true);
+        }
+        else
+        {
+            animator.SetBool("isMove", false);
+        }
         if (UI_CardLimited != null)
         {
             UI_CardLimited.text = "Card Limited: "+cardLimited.ToString();
@@ -142,6 +164,12 @@ public class Character : MonoBehaviour
 
         if (!_isNeardeath && !_isDeath && _canOperate)
         {
+            if (hasWeapon)
+            {
+                weapon.active = true;
+
+            }
+
             switch (moveStatus)
             {
                 case MoveStatus.idile:
@@ -153,22 +181,22 @@ public class Character : MonoBehaviour
                     if (FindFirstObjectByType<GameMode>()._isBattle)
                     {
                         //RemainMoveDistance = MaxMoveDistance - (totalLength - agent.remainingDistance);
-
+                        /*
                         if (totalDistance >= RoundMoveDistance)
                         {
                             agent.isStopped = true;
-                        }
+                        }*/
 
-                        // ¼ÆËãµ±Ç°Ö¡ÒÆ¶¯µÄ¾àÀë
+                        // ï¿½ï¿½ï¿½ãµ±Ç°Ö¡ï¿½Æ¶ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½
                         float distanceThisFrame = Vector3.Distance(lastPosition, transform.position);
 
-                        // ÀÛ¼Ó×Ü¾àÀë
+                        // ï¿½Û¼ï¿½ï¿½Ü¾ï¿½ï¿½ï¿½
                         totalDistance += distanceThisFrame;
                         RemainMoveDistance -= distanceThisFrame;
 
-                        // ¸üÐÂÉÏÒ»Ö¡µÄÎ»ÖÃ
+                        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ï¿½ï¿½Î»ï¿½ï¿½
                         lastPosition = transform.position;
-                        //print("ÒÆ¶¯ÁË£º"+ totalDistance);
+                        //print("ï¿½Æ¶ï¿½ï¿½Ë£ï¿½"+ totalDistance);
 
                     }
 
@@ -177,10 +205,12 @@ public class Character : MonoBehaviour
                         agent.stoppingDistance = 0;
                     }
 
-                    if (agent.remainingDistance <= agent.stoppingDistance)
-                    {
-                        MaxMoveDistance = RemainMoveDistance;
+
+                    //MaxMoveDistance = RemainMoveDistance;
+                    
                         moveStatus = MoveStatus.idile;
+
+                       
 
                         //After the npc completes the behavior, execute SwitchNextCharacter()
                         if (!_isPlayPawn)
@@ -188,51 +218,54 @@ public class Character : MonoBehaviour
                             agent.isStopped = true;
                             FindAnyObjectByType<GameMode>().SwitchNextCharacter();
                         }
-                    }
+
                     break;
 
                 case MoveStatus.moveAndAttack:
                     GetAgent();
+                    print("speed: " + agent.speed);
                     agent.isStopped = false;
                     if (FindFirstObjectByType<GameMode>()._isBattle)
                     {
                         //RemainMoveDistance = MaxMoveDistance - (totalLength - agent.remainingDistance);
 
+                        /*
                         if (totalDistance >= RoundMoveDistance)
                         {
                             agent.isStopped = true;
-                        }
+                        }*/
 
-                        // ¼ÆËãµ±Ç°Ö¡ÒÆ¶¯µÄ¾àÀë
+                        // ï¿½ï¿½ï¿½ãµ±Ç°Ö¡ï¿½Æ¶ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½
                         float distanceThisFrame = Vector3.Distance(lastPosition, transform.position);
 
-                        // ÀÛ¼Ó×Ü¾àÀë
+                        // ï¿½Û¼ï¿½ï¿½Ü¾ï¿½ï¿½ï¿½
                         totalDistance += distanceThisFrame;
                         RemainMoveDistance -= distanceThisFrame;
 
-                        // ¸üÐÂÉÏÒ»Ö¡µÄÎ»ÖÃ
+                        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ï¿½ï¿½Î»ï¿½ï¿½
                         lastPosition = transform.position;
 
                         //agent.stoppingDistance = attackRadius;
                     }
                     else
                     {
-                        agent.stoppingDistance = 0;
+                        agent.stoppingDistance = attackRadius;
                     }
 
                     if (Vector3.Distance(transform.position,target.transform.position) <= attackRadius)
                     {
-                        MaxMoveDistance = RemainMoveDistance;
+                        if (!_isPlayPawn)
+                        {
+                            print(agent.stoppingDistance);
+                            FindAnyObjectByType<GameMode>().SwitchNextCharacter();
+                        }
                         ApplyDamage(target, _damageType);
                         moveStatus = MoveStatus.idile;
                         agent.isStopped = true;
                         _characterStatus=CharacterStatus.normal;
 
                         //After the npc completes the behavior, execute SwitchNextCharacter()
-                        if (!_isPlayPawn)
-                        {
-                            FindAnyObjectByType<GameMode>().SwitchNextCharacter();
-                        }
+                        
                     }
                     break;
 
@@ -322,11 +355,14 @@ public class Character : MonoBehaviour
      *  If you need to extend the damage type, add an enum in enum DamageType
      *
      *@param target: Attack Target
-     *@param damageType : damage Type inlude normal attack£¬fire, freeze.
+     *@param damageType : damage Type inlude normal attackï¿½ï¿½fire, freeze.
      */
     void ApplyDamage(GameObject target, DamageType damageType)
     {
-        
+        if (camp == CharacterCamp.monster)
+        {
+            animator.SetBool("Attack", true);
+        }
             switch (damageType)
             {
                 case DamageType.normal:
@@ -340,8 +376,7 @@ public class Character : MonoBehaviour
                     target.GetComponent<Character>().isFreeze = true;
                     break;
             }
-
-            target.GetComponent<Character>().RecvDamage(attackValue, this.gameObject);
+        target.GetComponent<Character>().RecvDamage(attackValue, this.gameObject);
 
     }
 
@@ -358,8 +393,17 @@ public class Character : MonoBehaviour
      */
     void RecvDamage(float hurtValue,GameObject enermy)
     {
-        //Í¨Öª»ï°é¼ÓÈëÕ½¶·,´¦ÓÚÕ½¶·×´Ì¬ÁËÔò²»ÐèÒªÍ¨Öª
+        animator.SetBool("attack",true);
         GameMode gameMode = FindFirstObjectByType<GameMode>();
+        if (hurtValue>currentHealth&& !gameMode.GetBattleStatus())
+        {
+            animator.SetBool("isDeath", true);
+            Destroy(this.gameObject);
+            print("des");
+            return;
+        }
+        //Í¨Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÍ¨Öª
+        
         if (!gameMode.GetBattleStatus())
         {
             gameMode.GenerateQueue(transform.position,camp,gameObject);
@@ -375,15 +419,16 @@ public class Character : MonoBehaviour
         if (defenceValue > hurtValue)
         {
             float randomValue = Random.Range(0f, 100f);
-            if (randomValue <= 60)
+            if (randomValue <= 90)
             {
-                SetHP(hurtValue*-1);
-                //±äÉ«Ä£ÄâÊÜÉË
+                SetHP(hurtValue*(-0.4f));
+                //ï¿½ï¿½É«Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 GetComponent<Renderer>().material.color=Color.red;
 
                 if (currentHealth <= 0)
                 {
                     _isNeardeath = true;
+                    Destroy(this.gameObject);
                 }
             }
         }
@@ -395,6 +440,7 @@ public class Character : MonoBehaviour
             if (currentHealth <= 0)
             {
                 _isNeardeath = true;
+                Destroy(this.gameObject);
             }
         }
 
@@ -559,5 +605,10 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void BackStatus()
+    {
+        print("ttttttt");
+        animator.SetBool("attack", false);
+    }
 
 }

@@ -1,0 +1,1580 @@
+# Blender 3.3.1 MTL File: 'SS.blend'
+# www.blender.org
+
+newmtl materials/brick/brickwall008a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_brickwall008a.tga
+
+newmtl materials/brick/brickwall008d
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_brickwall008d.tga
+
+newmtl materials/brick/brickwall027a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_brickwall027a.tga
+
+newmtl materials/brick/brickwall049a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_brickwall049a.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_brick_brickwall049a_normal.tga
+
+newmtl materials/brick/brickwall053a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_brickwall053a.tga
+
+newmtl materials/brick/brickwall053d
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_brickwall053d.tga
+
+newmtl materials/brick/brickwall_baggage_base
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_brickwall_baggage_base.tga
+
+newmtl materials/brick/embassy_brickwall_01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.070000 0.070000 0.070000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_embassy_brickwall_01a.tga
+
+newmtl materials/brick/infwllb
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_infwllb.tga
+
+newmtl materials/brick/urban_a_brickwall_02b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.070000 0.070000 0.070000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_urban_brickwall_02b.tga
+
+newmtl materials/brick/wall20
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.070000 0.070000 0.070000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_wall20.tga
+
+newmtl materials/brick/wallparkingd_nobump
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_brick_wallparkingd.tga
+
+newmtl materials/buildings/trim21
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_buildings_trim21.tga
+
+newmtl materials/buildings/vertigo_landscape
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_buildings_vertigo_landscape.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_buildings_vertigo_landscape.tga
+
+newmtl materials/concrete/blend_blacktop_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_blacktop_ext_01.tga
+
+newmtl materials/concrete/blend_rubble_02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_nature_ground_grass01.tga
+
+newmtl materials/concrete/cinderblockwall01colortint_green
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_cinderblockwall01colortint.tga
+
+newmtl materials/concrete/concrete_ext_12
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concrete_ext_12.tga
+
+newmtl materials/concrete/concrete_ext_14
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concrete_ext_14.tga
+
+newmtl materials/concrete/concrete_ext_14b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concrete_ext_14b.tga
+
+newmtl materials/concrete/concrete_floor_04
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concrete_floor_04.tga
+
+newmtl materials/concrete/concretefloor006a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretefloor006a.tga
+
+newmtl materials/concrete/concretefloor008a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretefloor008a.tga
+
+newmtl materials/concrete/concretefloor024a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretefloor024a.tga
+
+newmtl materials/concrete/concretefloor031a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretefloor031a.tga
+
+newmtl materials/concrete/concretewall004b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall004b.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall004a_normal.tga
+
+newmtl materials/concrete/concretewall007a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall007a.tga
+
+newmtl materials/concrete/concretewall010a_ssbump
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall010a.tga
+
+newmtl materials/concrete/concretewall011h
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall011h.tga
+
+newmtl materials/concrete/concretewall034a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall034a.tga
+
+newmtl materials/concrete/concretewall038d
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall038d.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall038d_normal.tga
+
+newmtl materials/concrete/concretewall044a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall044a.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall044a_normal.tga
+
+newmtl materials/concrete/concretewall056b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall056b.tga
+
+newmtl materials/concrete/highway_02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_highway_02.tga
+
+newmtl materials/concrete/highway_02_intersection
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_highway_02_intersection.tga
+
+newmtl materials/concrete/highway_02_turn
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_highway_02_turn.tga
+
+newmtl materials/concrete/highway_03b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_highway_03b.tga
+
+newmtl materials/concrete/prodstepfrnt
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_prodstepfrnt.tga
+
+newmtl materials/concrete/prodwlle
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_prodwlle.tga
+
+newmtl materials/concrete/sewer_concretewall01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_sewer_concretewall01a.tga
+
+newmtl materials/concrete/sewer_concretewall02b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_sewer_concretewall02b.tga
+
+newmtl materials/concrete/subway_concretewall_01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_subway_concretewall_01a.tga
+
+newmtl materials/concrete/subway_concretewall_01c
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_subway_concretewall_01c.tga
+
+newmtl materials/concrete/tunnel_concretewall_01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.150000 0.150000 0.150000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_tunnel_concretewall_01a.tga
+
+newmtl materials/concrete/tunnel_concretewall_01b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_tunnel_concretewall_01b.tga
+
+newmtl materials/concrete/tunnel_concretewall_01c
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.150000 0.150000 0.150000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_tunnel_concretewall_01c.tga
+
+newmtl materials/cs_assault/assault_brick1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_brick1.tga
+
+newmtl materials/cs_assault/assault_door1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_door1.tga
+
+newmtl materials/cs_assault/assault_handrails01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_handrails01.tga
+
+newmtl materials/cs_assault/assault_hide01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_hide01.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_hide01.tga
+
+newmtl materials/cs_assault/assault_metalcrate001a_red
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_metalcrate001a_red.tga
+
+newmtl materials/cs_assault/assault_metalcrate001b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_metalcrate001b.tga
+
+newmtl materials/cs_assault/assault_metalcrate001b_red
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_metalcrate001b_red.tga
+
+newmtl materials/cs_assault/assault_metalcrate001c_red
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_metalcrate001c_red.tga
+
+newmtl materials/cs_assault/assault_metalcrate001d
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_metalcrate001d.tga
+
+newmtl materials/cs_assault/assault_police_tape01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_police_tape01.tga
+
+newmtl materials/cs_assault/assault_trainstation_truss_01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_trainstation_truss_01a.tga
+
+newmtl materials/cs_assault/assault_trainstation_truss_01c
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_trainstation_truss_01c.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_trainstation_truss_01c.tga
+
+newmtl materials/cs_assault/assault_warehouse_window
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.350000 0.350000 0.350000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_assault_warehouse_window.tga
+
+newmtl materials/cs_assault/concretefloor026a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_concretefloor026a.tga
+
+newmtl materials/cs_assault/metalwall001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_metalwall001.tga
+
+newmtl materials/cs_assault/metalwall001a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_metalwall001a.tga
+
+newmtl materials/cs_assault/steps_escalator01_desat
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.050000 0.050000 0.050000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_steps_escalator01_desat.tga
+
+newmtl materials/cs_assault/subway_tilefloor_nonslip_desat
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.050000 0.050000 0.050000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_subway_tilefloor_nonslip_desat.tga
+
+newmtl materials/cs_assault/windowbrightness
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_assault_windowbrightness.tga
+
+newmtl materials/cs_havana/metalfence007a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalfence007a.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_metal_metalfence007a.tga
+
+newmtl materials/cs_italy/black
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_italy_black.tga
+
+newmtl materials/cs_office/cs_highway_and_business_park_signs
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_cs_office_cs_highway_and_business_park_signs.tga
+
+newmtl materials/de_nuke/nuke_ceiling_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_nuke_nuke_ceiling_01.tga
+
+newmtl materials/de_nuke/nukroofa
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_nuke_nukroofa.tga
+
+newmtl materials/de_piranesi/pi_grnmetalt
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_piranesi_pi_grnmetalt.tga
+
+newmtl materials/de_piranesi/pi_wood3
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_piranesi_pi_wood3.tga
+
+newmtl materials/de_prodigy/concrete02a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_prodigy_concrete02a.tga
+
+newmtl materials/de_prodigy/concrete02b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_prodigy_concrete02b.tga
+
+newmtl materials/de_train/train_brick_wall_04_bump
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_train_train_brick_wall_04.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_concrete_concretewall041d_normal.tga
+
+newmtl materials/de_train/train_brick_wall_06
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_train_train_brick_wall_06.tga
+
+newmtl materials/de_train/train_cement_floor_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_train_train_cement_floor_01.tga
+
+newmtl materials/de_train/train_cementwear_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_train_train_cementwear_01.tga
+
+newmtl materials/de_train/train_dirt_floor_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_train_train_dirt_floor_01.tga
+
+newmtl materials/de_train/train_roofgreebles_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_train_train_roofgreebles_01.tga
+
+newmtl materials/de_train/train_roofgreebles_02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_train_train_roofgreebles_02.tga
+
+newmtl materials/de_train/train_roofgreebles_03
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_de_train_train_roofgreebles_03.tga
+
+newmtl materials/glass/blinds_illuminated
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_blinds_illuminated.tga
+
+newmtl materials/glass/glass01opaque
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_windows_window_uban_apt_glass.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_windows_window_uban_apt_glass_ref.tga
+
+newmtl materials/glass/glasswindow005a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow005a.tga
+
+newmtl materials/glass/glasswindow006b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow006b.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow006b.tga
+
+newmtl materials/glass/glasswindow028a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.350000 0.350000 0.350000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow028a.tga
+
+newmtl materials/glass/glasswindow028b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.350000 0.350000 0.350000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow028b.tga
+
+newmtl materials/glass/glasswindow028c
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.350000 0.350000 0.350000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow028c.tga
+
+newmtl materials/glass/glasswindow028d
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow028d.tga
+
+newmtl materials/glass/glasswindow037a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow037a.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow037a_mask.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow037a.tga
+
+newmtl materials/glass/glasswindow041c
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow041c.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow041c.tga
+
+newmtl materials/glass/glasswindow048a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.750000 0.750000 0.750000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindow048a.tga
+
+newmtl materials/glass/glasswindowwarehouse
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_glasswindowwarehouse.tga
+
+newmtl materials/glass/offlightcover_off
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_offlightcover_off.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_glass_offlightcover_ref.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_glass_offlightcover_off.tga
+
+newmtl materials/glass/prodwndwa
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_prodwndwa.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_glass_offwndwb_ref.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_glass_prodwndwa.tga
+
+newmtl materials/glass/unbreakable_glass_a_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_glass_unbreakable_glass_a_01.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_glass_unbreakable_glass_a_01.tga
+
+newmtl materials/metal/2x4_metal
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_vertigo_2x4_metal.tga
+
+newmtl materials/metal/distressed_metal_panel_roof
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.533333 0.533333 0.533333
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_distressed_metal_panel_roof.tga
+
+newmtl materials/metal/drainage_beam_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_drainage_beam_01.tga
+
+newmtl materials/metal/ibeam_assault
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.216667 0.216667 0.216667
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_ibeam.tga
+
+newmtl materials/metal/metal_ext_08
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metal_ext_08.tga
+
+newmtl materials/metal/metal_panel_roof-ssbump
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.533333 0.533333 0.533333
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metal_panel_roof.tga
+
+newmtl materials/metal/metal_treadplate-ssbump
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.733333 0.733333 0.733333
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metal_tread_plate.tga
+
+newmtl materials/metal/metaldoor007a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metaldoor007a.tga
+
+newmtl materials/metal/metaldoor009a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metaldoor009a.tga
+
+newmtl materials/metal/metaldoor018a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metaldoor018a.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_metal_metaldoor018a_normal.tga
+
+newmtl materials/metal/metaldoor028b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metaldoor028b.tga
+
+newmtl materials/metal/metaldoor032a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metaldoor032a.tga
+
+newmtl materials/metal/metaldoor045a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metaldoor045a.tga
+
+newmtl materials/metal/metalducts
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.533333 0.533333 0.533333
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalducts.tga
+
+newmtl materials/metal/metalfloor002a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalfloor002a.tga
+
+newmtl materials/metal/metalfloor005a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalfloor005a.tga
+
+newmtl materials/metal/metalgate001a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgate001a.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgate001a.tga
+
+newmtl materials/metal/metalgate001a_castshadow
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgate001a.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgate001a.tga
+
+newmtl materials/metal/metalgrate004a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgrate004a.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgrate004a.tga
+
+newmtl materials/metal/metalgrate008a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgrate008a.tga
+
+newmtl materials/metal/metalgrate013a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgrate013a.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_metal_metalgrate013a.tga
+
+newmtl materials/metal/metalhull009b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalhull009b.tga
+
+newmtl materials/metal/metaltruss017a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metaltruss017a.tga
+
+newmtl materials/metal/metalvent002b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.050000 0.050000 0.050000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalvent002b.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_metal_metalvent002a_normal.tga
+
+newmtl materials/metal/metalvent005a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalvent005a.tga
+
+newmtl materials/metal/metalwall005b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalwall005b.tga
+
+newmtl materials/metal/metalwall026a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalwall026a.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_metal_metalwall026a_normal.tga
+
+newmtl materials/metal/metalwall030a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalwall030a.tga
+
+newmtl materials/metal/metalwall031a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalwall031a.tga
+
+newmtl materials/metal/metalwall070a_cheap
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalwall070a.tga
+
+newmtl materials/metal/metalwall070e_cheap
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metalwall070e.tga
+
+newmtl materials/metal/milwall005
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_milwall005.tga
+
+newmtl materials/metal/prodcaution
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_prodcaution.tga
+
+newmtl materials/metal/prodstairsafrnt
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_prodstairsafrnt.tga
+
+newmtl materials/metal/prodventb
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_prodventb.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_metal_prodventb.tga
+
+newmtl materials/nature/gravelfloor002a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_nature_gravelfloor002a.tga
+
+newmtl materials/plaster/milwall001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_plaster_milwall001.tga
+
+newmtl materials/plaster/plaster_ext_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_plaster_plaster_ext_01.tga
+
+newmtl materials/plaster/urban_plasterwall_01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.030000 0.030000 0.030000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_plaster_urban_plasterwall_01a.tga
+
+newmtl materials/plaster/wallpaper01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.030000 0.030000 0.030000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_plaster_wallpaper01.tga
+
+newmtl materials/props/metalfan001a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_props_metalfan001a.tga
+
+newmtl materials/props/metalpanel020a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_props_metalpanel020a.tga
+
+newmtl materials/props/woodcrate003a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_props_woodcrate003a.tga
+
+newmtl materials/props/woodcrate003d
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_props_woodcrate003d.tga
+
+newmtl materials/signs/tunnel_signs_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_signs_tunnel_signs_01.tga
+
+newmtl materials/tile/base_subway01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_tile_base_subway01.tga
+
+newmtl materials/tile/ceilingtilea
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_tile_ceilingtilea.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_tile_ceilingtilea_ref.tga
+
+newmtl materials/tile/tilefloor012a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_tile_tilefloor012a.tga
+
+newmtl materials/tools/toolsblack
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_tools_toolsblack.tga
+
+newmtl materials/tools/toolsinvisible
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl materials/tools/toolsnodraw
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl materials/tools/toolsskybox
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl materials/wood/plywood01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_wood_plywood01.tga
+
+newmtl materials/wood/plywood02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_wood_plywood02.tga
+
+newmtl materials/wood/vertigo_plywood
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_wood_vertigo_plywood.tga
+
+newmtl materials/wood/wood_int_10
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_wood_wood_int_10.tga
+
+newmtl materials/wood/wooddoor015a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_wood_wooddoor015a.tga
+
+newmtl materials/wood/wooddoor039a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_wood_wooddoor039a.tga
+
+newmtl materials/wood/woodwall011a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_wood_woodwall011a.tga
+
+newmtl materials/wood/woodwall018a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_wood_woodwall018a.tga

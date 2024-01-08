@@ -8,6 +8,7 @@ TagManager:
   - Terrain
   - mark
   - Item
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - MoveArea
+  - em
   - 
   - 
   - 
@@ -42,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: em
+    uniqueID: 2372758651
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

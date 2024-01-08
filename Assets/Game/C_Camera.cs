@@ -21,6 +21,8 @@ public class C_Camera : MonoBehaviour
     public GameObject targetPointMark;
     public GameObject playerPawn;
 
+    public float MouseSpeed;
+
     public Vector3 moveValue = new Vector3(0, 0, 0);
     public CameraMode cameraMode = CameraMode.freedom;
     float _duration = 10f;
@@ -52,7 +54,6 @@ public class C_Camera : MonoBehaviour
         _y_distance = (transform.position.y - casHit.point.y) / 15;
         _z_distance = (transform.position.z - casHit.point.z) / 15;
         _rotateDegree = (transform.rotation.x - 5) / 3;
-        print(_rotateDegree);
         
 
         //FindAnyObjectByType()
@@ -62,6 +63,15 @@ public class C_Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            transform.position+=new Vector3(0f,0.2f,0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            transform.position += new Vector3(0f, -0.2f, 0f);
+        }
         PlayerPawnHP.text = playerPawn.GetComponent<Character>().currentHealth.ToString() + "/" +
                             playerPawn.GetComponent<Character>().maxhealth.ToString();
 
@@ -90,11 +100,11 @@ public class C_Camera : MonoBehaviour
         switch (cameraMode)
             {
                 case CameraMode.clockwiseRotate:
-                    transform.Rotate(Vector3.up, 3, Space.World);
+                    transform.Rotate(Vector3.up, 1.5f, Space.World);
                     break;
 
                 case CameraMode.anticlockwiseRotation:
-                    transform.Rotate(Vector3.up, -3, Space.World);
+                    transform.Rotate(Vector3.up, -1.5f, Space.World);
                     break;
 
                 case CameraMode.track:
@@ -140,16 +150,18 @@ public class C_Camera : MonoBehaviour
 
     void OnCameraMove(InputValue value)
     {
+        
         moveValue.z = value.Get<Vector2>().y;
         moveValue.x = value.Get<Vector2>().x;
-        _moveDir = new Vector3(transform.forward.x, 0, transform.forward.z) * moveValue.z +
-                   transform.right * moveValue.x;
+        _moveDir = new Vector3(transform.forward.x* MouseSpeed, 0, transform.forward.z*MouseSpeed) * moveValue.z +
+                   transform.right * moveValue.x * MouseSpeed;
     }
 
     void OnInteract()
     {
 
         var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Character component = playerPawn.gameObject.GetComponent<Character>();
 
         if (Physics.Raycast(ray, out casHit))
         {
@@ -157,46 +169,67 @@ public class C_Camera : MonoBehaviour
             {
                 if (casHit.collider.gameObject.tag != "Character")
                 {
-
-                    Character component = playerPawn.gameObject.GetComponent<Character>();
-
-                    //Calculate total navigation path length
-                    float totalLength = 0f;
-                    for (int i = 0; i < component.pathFound.lineRenderer.positionCount-1;i++)
+                    if (casHit.collider.gameObject.tag == "box")
                     {
-                        Vector3 pointA = component.pathFound.lineRenderer.GetPosition(i);
-                        Vector3 pointB = component.pathFound.lineRenderer.GetPosition(i + 1);
-                        totalLength += Vector3.Distance(pointA, pointB);
-                    }
-
-                    component.totalLength = totalLength;
-
-                    //If attackOrder is -1, it means that the character is not in combat and will not participate in the round settlement.
-                    if (component.attackOrder == -1)
+                        if(Vector3.Distance(component.transform.position, casHit.collider.gameObject.transform.position) <= 0.5)
+                        {
+                            Box box = casHit.collider.gameObject.GetComponent<Box>();
+                            component.ammo += box.ammo;
+                            box.ammo = 0;
+                        }
+                    }else if (casHit.collider.gameObject.tag == "Weapon")
                     {
-                        component.AI_MovetoPoint(casHit.point);
+                     
+                        component.hasWeapon = true;
+                        GetComponent<Task1>().task2 = true;
+                        Destroy(GetComponent<Task1>().task2mark.gameObject);
+
                     }
-                    //If it is not -1, it means that you are in combat. Determine whether you can move based on the value of GetCanOperate().
                     else
                     {
-                        if (component.GetCanOperate())
-                        {
+                        
 
+                        //Calculate total navigation path length
+                        float totalLength = 0f;
+                        for (int i = 0; i < component.pathFound.lineRenderer.positionCount - 1; i++)
+                        {
+                            Vector3 pointA = component.pathFound.lineRenderer.GetPosition(i);
+                            Vector3 pointB = component.pathFound.lineRenderer.GetPosition(i + 1);
+                            totalLength += Vector3.Distance(pointA, pointB);
+                        }
+
+                        component.totalLength = totalLength;
+
+                        //If attackOrder is -1, it means that the character is not in combat and will not participate in the round settlement.
+                        if (component.attackOrder == -1)
+                        {
                             component.AI_MovetoPoint(casHit.point);
+                        }
+                        //If it is not -1, it means that you are in combat. Determine whether you can move based on the value of GetCanOperate().
+                        else
+                        {
+                            if (component.GetCanOperate())
+                            {
+
+                                component.AI_MovetoPoint(casHit.point);
+                            }
                         }
                     }
                 }
                 else
                 {
-                    Character component = playerPawn.gameObject.GetComponent<Character>();
                     //You can only hit someone after selecting the attack mode
-                    if (component.GetCharacterStatus()==Character.CharacterStatus.attack)
+                    if (component.GetCharacterStatus() == Character.CharacterStatus.attack)
                     {
                         switch (component._damageType)
                         {
                             case Character.DamageType.normal:
                                 component.AI_Attack(casHit.collider.gameObject);
-                                component.AttackButton.interactable = false;
+                                if (casHit.collider.gameObject.GetComponent<Character>().needBan)
+                                {
+                                    component.AttackButton.interactable = false;
+                                }
+                               
                                 break;
 
                             case Character.DamageType.fire:
@@ -216,7 +249,7 @@ public class C_Camera : MonoBehaviour
                                 break;
 
                         }
-                        
+
                     }
                 }
 

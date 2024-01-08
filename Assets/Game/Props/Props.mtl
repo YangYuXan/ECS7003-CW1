@@ -1,0 +1,2254 @@
+# Blender 3.3.1 MTL File: 'SS.blend'
+# www.blender.org
+
+newmtl materials/models/props/crates/wcrate_32x64
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_crates_wcrate_32x64.tga
+
+newmtl materials/models/props/cs_assault/acunits01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_acunits01.tga
+
+newmtl materials/models/props/cs_assault/ak_rack
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_ak_rack.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_ak_rack.tga
+
+newmtl materials/models/props/cs_assault/camera
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_camera.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_camera_ref.tga
+
+newmtl materials/models/props/cs_assault/car_body_blue
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_body_blue.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_body_envmap.tga
+
+newmtl materials/models/props/cs_assault/car_body_red
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_body_red.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_body_envmap.tga
+
+newmtl materials/models/props/cs_assault/car_parts
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_envmap.tga
+
+newmtl materials/models/props/cs_assault/car_parts_blue
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_blue.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_envmap.tga
+
+newmtl materials/models/props/cs_assault/car_parts_green
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_green.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_envmap.tga
+
+newmtl materials/models/props/cs_assault/car_parts_red
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_red.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_envmap.tga
+
+newmtl materials/models/props/cs_assault/car_parts_yellow
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_yellow.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_parts_envmap.tga
+
+newmtl materials/models/props/cs_assault/car_tarp
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_car_tarp.tga
+
+newmtl materials/models/props/cs_assault/chain
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_chain.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_chain.tga
+
+newmtl materials/models/props/cs_assault/de_train_handrails_03
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_de_train_handrails_03.tga
+
+newmtl materials/models/props/cs_assault/dollar
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_dollar.tga
+
+newmtl materials/models/props/cs_assault/duct
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_duct.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_duct_ref.tga
+
+newmtl materials/models/props/cs_assault/engine_block
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_engine_block.tga
+
+newmtl materials/models/props/cs_assault/floodlight02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_floodlight02.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_floodlight02_ref.tga
+
+newmtl materials/models/props/cs_assault/floodlight02_on
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_floodlight02_on.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_floodlight02_ref.tga
+
+newmtl materials/models/props/cs_assault/forklift_new
+Ns 202.500000
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_forklift_new.tga
+
+newmtl materials/models/props/cs_assault/gunrunner_propak47
+Ns 159.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_gunrunner_propak47.tga
+
+newmtl materials/models/props/cs_assault/ladder_tall
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_ladder_tall.tga
+
+newmtl materials/models/props/cs_assault/ladderaluminium
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_ladderaluminium.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_ladderaluminium_ref.tga
+
+newmtl materials/models/props/cs_assault/light_keybox
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_keybox.tga
+
+newmtl materials/models/props/cs_assault/light_shop2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_shop2.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_shop2_ref.tga
+
+newmtl materials/models/props/cs_assault/light_shop2_off
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_shop2.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_shop2_ref.tga
+
+newmtl materials/models/props/cs_assault/light_shop2b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_shop2b.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_shop2_ref.tga
+
+newmtl materials/models/props/cs_assault/light_shop2b_off
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_shop2b.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_light_shop2_ref.tga
+
+newmtl materials/models/props/cs_assault/metal_stairs1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_metal_stairs1.tga
+
+newmtl materials/models/props/cs_assault/metal_stairs2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_metal_stairs2.tga
+
+newmtl materials/models/props/cs_assault/meter
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_meter.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_meter_ref.tga
+
+newmtl materials/models/props/cs_assault/moneylong
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_moneylong.tga
+
+newmtl materials/models/props/cs_assault/moneyshort
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_moneyshort.tga
+
+newmtl materials/models/props/cs_assault/moneytop
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_moneytop.tga
+
+newmtl materials/models/props/cs_assault/noparking
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_noparking.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_noparking_ref.tga
+
+newmtl materials/models/props/cs_assault/nostopssign
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_nostopssign.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_nostopssign_ref.tga
+
+newmtl materials/models/props/cs_assault/palletwood
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_palletwood.tga
+
+newmtl materials/models/props/cs_assault/plywood
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_plywood.tga
+
+newmtl materials/models/props/cs_assault/pylon
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_pylon.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_pylon_ref.tga
+
+newmtl materials/models/props/cs_assault/railingtraintrack
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_railingtraintrack.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_railingtraintrack_ref.tga
+
+newmtl materials/models/props/cs_assault/rolling_door
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_rolling_door.tga
+
+newmtl materials/models/props/cs_assault/security_fence01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_security_fence01.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_security_fence01.tga
+
+newmtl materials/models/props/cs_assault/security_fence02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_security_fence02.tga
+
+newmtl materials/models/props/cs_assault/security_shelf
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_security_shelf.tga
+
+newmtl materials/models/props/cs_assault/stacked_boxes01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_stacked_boxes01.tga
+
+newmtl materials/models/props/cs_assault/station_awning
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_station_awning.tga
+
+newmtl materials/models/props/cs_assault/stoplight
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_stoplight.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_stoplight_ref.tga
+
+newmtl materials/models/props/cs_assault/streetlight
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_streetlight.tga
+
+newmtl materials/models/props/cs_assault/streetlight_on
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_streetlight_on.tga
+
+newmtl materials/models/props/cs_assault/streetsigns01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_streetsigns01.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_streetsigns01_ref.tga
+
+newmtl materials/models/props/cs_assault/tool_cages_props1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_tool_cages_props1.tga
+
+newmtl materials/models/props/cs_assault/tool_cages_props2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_tool_cages_props2.tga
+
+newmtl materials/models/props/cs_assault/torn_autobox
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_torn_autobox.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_torn_autobox.tga
+
+newmtl materials/models/props/cs_assault/trainstationsign
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_trainstationsign.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_trainstationsign_ref.tga
+
+newmtl materials/models/props/cs_assault/ventilationduct01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_ventilationduct01.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_ventilationduct01_ref.tga
+
+newmtl materials/models/props/cs_assault/ventilationduct02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_ventilationduct02.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_ventilationduct02_ref.tga
+
+newmtl materials/models/props/cs_assault/wall_vent
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_wall_vent.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_wall_vent_ref.tga
+
+newmtl materials/models/props/cs_assault/wall_wires1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_wall_wires1.tga
+
+newmtl materials/models/props/cs_assault/warehousebeams
+Ns 364.815979
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_warehousebeams.tga
+
+newmtl materials/models/props/cs_assault/warehouserailing
+Ns 289.444000
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_warehouserailing.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_warehouserailing_n.tga
+
+newmtl materials/models/props/cs_assault/warehouseskylight
+Ns 289.444000
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_warehouseskylight.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_warehouseskylight_n.tga
+
+newmtl materials/models/props/cs_assault/warehouseskylightglass_a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_cs_assault_warehouseskylightglass.tga
+map_d C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_cs_assault_warehouseskylightglass.tga
+
+newmtl materials/models/props/cs_assault/wirepipe
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_wirepipe.tga
+
+newmtl materials/models/props/cs_assault/wirespout
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_wirespout.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_assault_wirespout_ref.tga
+
+newmtl materials/models/props/cs_militia/boxes1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_boxes1.tga
+
+newmtl materials/models/props/cs_militia/circularsaw01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_circularsaw01.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_circularsaw01_ref.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_circularsaw01.tga
+
+newmtl materials/models/props/cs_militia/circularsawblade01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_circularsawblade01.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_cs_militia_circularsawblade01_ref.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_circularsawblade01.tga
+
+newmtl materials/models/props/cs_militia/light_shop2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_light_shop2.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_light_shop2_ref.tga
+
+newmtl materials/models/props/cs_militia/newspaperstack01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_militia_newspaperstack01.tga
+
+newmtl materials/models/props/cs_office/computer
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_computer.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_computer_ref.tga
+
+newmtl materials/models/props/cs_office/computer_case
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_computer.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_computer_case_ref.tga
+
+newmtl materials/models/props/cs_office/file_box
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_file_box.tga
+
+newmtl materials/models/props/cs_office/file_cabinet2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_file_cabinet2.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_file_cabinet2_ref.tga
+
+newmtl materials/models/props/cs_office/file_cabinet3
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_file_cabinet3.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_file_cabinet3_ref.tga
+
+newmtl materials/models/props/cs_office/light_ceiling
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_light_ceiling.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_light_ceiling_ref.tga
+
+newmtl materials/models/props/cs_office/light_ceiling_off
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_light_ceiling.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_light_ceiling_ref.tga
+
+newmtl materials/models/props/cs_office/light_security
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_light_security.tga
+
+newmtl materials/models/props/cs_office/light_security2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_light_security2.tga
+
+newmtl materials/models/props/cs_office/light_security_off
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_light_securitya.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_fx_white25_ref.tga
+
+newmtl materials/models/props/cs_office/phone
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_phone.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_phone_ref.tga
+
+newmtl materials/models/props/cs_office/radio
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_radio.tga
+
+newmtl materials/models/props/cs_office/screen
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_screen.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_fx_white50_ref.tga
+
+newmtl materials/models/props/cs_office/screenb
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_screenb.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_fx_white50_ref.tga
+
+newmtl materials/models/props/cs_office/shelves_stuff
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_shelves_stuff.tga
+
+newmtl materials/models/props/cs_office/trash_can
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_trash_can.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_trash_can_ref.tga
+
+newmtl materials/models/props/cs_office/vending_machine
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_vending_machine.tga
+
+newmtl materials/models/props/cs_office/vending_machine_off
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_office_vending_machine01.tga
+
+newmtl materials/models/props/de_boathouse/toolchest_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_boathouse_toolchest_01.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_boathouse_toolchest_01_ref.tga
+
+newmtl materials/models/props/de_dust/dust_rusty_barrel
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_dust_dust_rusty_barrel.tga
+
+newmtl materials/models/props/de_house/swat_van_generic
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_house_swat_van_generic.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_house_swat_van_ref.tga
+
+newmtl materials/models/props/de_inferno/ceiling_light
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_inferno_ceiling_light.tga
+
+newmtl materials/models/props/de_inferno/wall_lamp_bulb
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_inferno_wall_lamp_bulb.tga
+
+newmtl materials/models/props/de_inferno/wall_lamp_bulb_off
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_inferno_wall_lamp_bulb.tga
+
+newmtl materials/models/props/de_mill/cableswithties
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_mill_cableswithties.tga
+
+newmtl materials/models/props/de_nuke/crate_extrasmall
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_nuke_crate_extrasmall.tga
+
+newmtl materials/models/props/de_nuke/light_wall
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_nuke_light_wall.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_nuke_light_wall_ref.tga
+
+newmtl materials/models/props/de_nuke/truck_nuke
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_nuke_truck_nuke.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_nuke_truck_nuke_ref.tga
+
+newmtl materials/models/props/de_prodigy/fan
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_prodigy_fan.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_prodigy_fan_ref.tga
+
+newmtl materials/models/props/de_prodigy/prodwlla
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_plaster_prodwlla.tga
+
+newmtl materials/models/props/de_prodigy/tirestack
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_prodigy_tirestack.tga
+
+newmtl materials/models/props/de_prodigy/wood_pallet_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_prodigy_wood_pallet_01.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_prodigy_wood_pallet_01_normal.tga
+
+newmtl materials/models/props/de_train/acunit1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_acunit1.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_acunit1.tga
+
+newmtl materials/models/props/de_train/de_train_floodlights_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_de_train_floodlights_01.tga
+
+newmtl materials/models/props/de_train/de_train_handrails_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_de_train_handrails_01.tga
+
+newmtl materials/models/props/de_train/de_train_handrails_02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_de_train_handrails_02.tga
+
+newmtl materials/models/props/de_train/floodlight
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_floodlight.tga
+
+newmtl materials/models/props/de_train/ladderaluminium
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_ladderaluminium.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_ladderaluminium_ref.tga
+
+newmtl materials/models/props/de_train/light_security
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_light_security.tga
+
+newmtl materials/models/props/de_train/light_security2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_light_security2.tga
+
+newmtl materials/models/props/de_train/railroadtracklong
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_railroadtracklong.tga
+
+newmtl materials/models/props/de_train/train_gutterandpipes
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_train_gutterandpipes.tga
+
+newmtl materials/models/props/de_train/train_oldbrick_01_prop
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_train_oldbrick_01_prop.tga
+
+newmtl materials/models/props/de_train/truck001c_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_truck001c_01.tga
+
+newmtl materials/models/props/de_train/utility_truck
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_utility_truck.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_train_utility_truck_ref.tga
+
+newmtl materials/models/props/de_vertigo/hvac_controlunit
+Ns 289.444000
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_vertigo_hvac_controlunit.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_vertigo_hvac_controlunit_n.tga
+
+newmtl materials/models/props/de_vertigo/hvac_ducts
+Ns 289.444000
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_vertigo_hvac_ducts.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_vertigo_hvac_ducts_n.tga
+
+newmtl materials/models/props/de_vertigo/ibeam_plates
+Ns 364.815979
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_vertigo_ibeam_plates.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_vertigo_ibeam_plates_n.tga
+
+newmtl materials/models/props/de_vostok/hardwareitems01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_de_vostok_hardwareitems01.tga
+
+newmtl materials/models/props/gg_handling/catwalk_railing
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_gg_handling_catwalk_railing.tga
+
+newmtl materials/models/props_c17/cagebulb01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_cagebulb01.tga
+
+newmtl materials/models/props_c17/fence_alpha
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_fence_alpha.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_fence_alpha.tga
+
+newmtl materials/models/props_c17/fence_composite01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_fence_composite01.tga
+
+newmtl materials/models/props_c17/gasmeters001a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_gasmeters001a.tga
+
+newmtl materials/models/props_c17/gate_door01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_gate_door01a.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_gate_door01a.tga
+
+newmtl materials/models/props_c17/metalladder001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_metalladder001.tga
+
+newmtl materials/models/props_c17/streetsigns_composite02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_streetsigns_composite02.tga
+
+newmtl materials/models/props_c17/utility_poles001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_utility_poles001.tga
+
+newmtl materials/models/props_doors/roll-up_door
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_doors_roll-up_door.tga
+
+newmtl materials/models/props_downtown/gutters
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_downtown_gutters.tga
+
+newmtl materials/models/props_downtown/street_signs
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_downtown_street_signs.tga
+
+newmtl materials/models/props_downtown/windows_exterior_03
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_downtown_windows_exterior_03.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_downtown_windows_exterior_03_spec.tga
+
+newmtl materials/models/props_fairgrounds/trafficbarrel
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_fairgrounds_trafficbarrel.tga
+
+newmtl materials/models/props_foliage/mall_trees_barks01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_mall_trees_barks01.tga
+
+newmtl materials/models/props_foliage/mall_trees_branches01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_mall_trees_branches01.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_mall_trees_branches01.tga
+
+newmtl materials/models/props_foliage/mall_trees_branches02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_mall_trees_branches02.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_mall_trees_branches02.tga
+
+newmtl materials/models/props_foliage/urban_trees_barks01_medium
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_urban_trees_barks01.tga
+
+newmtl materials/models/props_foliage/urban_trees_branches03_small
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_urban_trees_branches03.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_urban_trees_branches03.tga
+
+newmtl materials/models/props_fortifications/orangecone001
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_fortifications_orangecone001.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_fortifications_orangecone001_normal.tga
+
+newmtl materials/models/props_highway/metal_corrugated03a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metal_corrugated03a.tga
+
+newmtl materials/models/props_highway/metal_corrugated03b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_metal_metal_corrugated03b.tga
+
+newmtl materials/models/props_highway/overpass_1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_concrete_concrete_ext_12.tga
+
+newmtl materials/models/props_industrial/warehouse_shelves
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_industrial_warehouse_shelves.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_industrial_warehouse_shelves.tga
+
+newmtl materials/models/props_interiors/bench_subway
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_interiors_bench_subway.tga
+
+newmtl materials/models/props_interiors/bucket_tools
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_interiors_bucket_tools.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_interiors_bucket_tools_ref.tga
+
+newmtl materials/models/props_interiors/chair_office2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_interiors_chair_office2.tga
+
+newmtl materials/models/props_interiors/clipboardholder01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_interiors_clipboardholder01.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_interiors_clipboardholder01_ref.tga
+
+newmtl materials/models/props_interiors/desk_metal
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_interiors_desk_metal.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_interiors_desk_metal_ref.tga
+
+newmtl materials/models/props_interiors/file_cabinet1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_file_cabinet1.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_cs_office_file_cabinet1_ref.tga
+
+newmtl materials/models/props_junk/cinderblock01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_cinderblock01a.tga
+
+newmtl materials/models/props_junk/dumpster
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_dumpster.tga
+
+newmtl materials/models/props_junk/garbage001a_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_garbage001a_01.tga
+
+newmtl materials/models/props_junk/garbage003a_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_garbage003a_01.tga
+
+newmtl materials/models/props_junk/glassbottle01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_glassbottle01a.tga
+
+newmtl materials/models/props_junk/glassbottle01b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_glassbottle01b.tga
+
+newmtl materials/models/props_junk/physics_trash_hospital
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_physics_trash_hospital.tga
+
+newmtl materials/models/props_junk/plasticcrate01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_plasticcrate01a.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_plasticcrate01a.tga
+
+newmtl materials/models/props_junk/trafficcone001a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.300000 0.300000 0.300000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_trafficcone001a.tga
+
+newmtl materials/models/props_junk/trashclusters01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_trashclusters01.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_trashclusters01_specular.tga
+
+newmtl materials/models/props_junk/wood_palletcrate001a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_junk_wood_palletcrate001a.tga
+
+newmtl materials/models/props_lab/powerbox001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_lab_powerbox001.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_lab_powerbox001_ref.tga
+
+newmtl materials/models/props_lab/walllight_sheet
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_lab_walllight_sheet.tga
+
+newmtl materials/models/props_lighting/lightfixture04off
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_lighting_lightfixture04off.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_lighting_lightfixture04off_ref.tga
+
+newmtl materials/models/props_pipes/interiorpipe002a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_pipes_interiorpipe002a.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_pipes_interiorpipe002a_normal.tga
+
+newmtl materials/models/props_pipes/pipemetal004a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_pipes_pipemetal004a.tga
+
+newmtl materials/models/props_pipes/pipemetal004b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_pipes_pipemetal004b.tga
+
+newmtl materials/models/props_pipes/pipeset08d_128_001a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_pipes_pipeset08d_128_001a.tga
+
+newmtl materials/models/props_rooftop/acunit01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_acunit01.tga
+
+newmtl materials/models/props_rooftop/acvent02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_acvent02.tga
+
+newmtl materials/models/props_rooftop/acvent04
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_acvent04.tga
+
+newmtl materials/models/props_rooftop/billboard01_main
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_billboard01_main.tga
+
+newmtl materials/models/props_rooftop/billboard01_supports
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_billboard01_supports.tga
+
+newmtl materials/models/props_rooftop/billboard06_main
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_billboard06_main.tga
+
+newmtl materials/models/props_rooftop/gutter_pipe
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_gutter_pipe.tga
+
+newmtl materials/models/props_rooftop/roof_vent001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_roof_vent001.tga
+
+newmtl materials/models/props_rooftop/roof_vent002
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_roof_vent002.tga
+
+newmtl materials/models/props_rooftop/roof_vent003
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_roof_vent003.tga
+
+newmtl materials/models/props_rooftop/rooftop01a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_rooftop_rooftop01a.tga
+
+newmtl materials/models/props_street/awning_long
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_awning_long.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_awning_long_ref.tga
+
+newmtl materials/models/props_street/bollards
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_bollards.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_bollards_ref.tga
+
+newmtl materials/models/props_street/electrical_boxes
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_electrical_boxes.tga
+
+newmtl materials/models/props_street/firehydrant
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_firehydrant.tga
+
+newmtl materials/models/props_street/newspaper_dispenser
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_newspaper_dispenser.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_newspaper_dispenser_ref.tga
+
+newmtl materials/models/props_street/sign_parking
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_sign_parking.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_sign_parking_ref.tga
+
+newmtl materials/models/props_street/trashbin01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_trashbin01.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_trashbin01_ref.tga
+
+newmtl materials/models/props_street/warehouse_vent_pipes
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_warehouse_vent_pipes.tga
+
+newmtl materials/models/props_street/watertower01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_street_watertower01.tga
+
+newmtl materials/models/props_unique/guncabinet01_main
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_unique_guncabinet01_main.tga
+
+newmtl materials/models/props_unique/subwaycar_all
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_unique_subwaycar_all.tga
+map_Ke C:/Users/ALENWARE/Downloads/textures/materials_models_props_unique_subwaycar_all_illum.tga
+
+newmtl materials/models/props_unique/subwaycardoors
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_unique_subwaycardoors.tga
+
+newmtl materials/models/props_urban/bench001
+Ns 313.600006
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_bench001.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_bench001.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_fortifications_orangecone001_normal.tga
+
+newmtl materials/models/props_urban/curbs001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_curbs001.tga
+
+newmtl materials/models/props_urban/curbs002
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_curbs002.tga
+
+newmtl materials/models/props_urban/fire_escape
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_fire_escape.tga
+
+newmtl materials/models/props_urban/garbage_can002
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_garbage_can002.tga
+
+newmtl materials/models/props_urban/gates002
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_gates002.tga
+
+newmtl materials/models/props_urban/hotel_stair001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_hotel_stair001.tga
+
+newmtl materials/models/props_urban/parkinglot_light001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_parkinglot_light001.tga
+
+newmtl materials/models/props_urban/parkinglot_light001_on
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_parkinglot_light001_on.tga
+
+newmtl materials/models/props_urban/streetlight001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_streetlight001.tga
+
+newmtl materials/models/props_urban/telephone_pole001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_urban_telephone_pole001.tga
+
+newmtl materials/models/props_vehicles/4carz1024
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_4carz1024.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_4carz1024_envmask.tga
+
+newmtl materials/models/props_vehicles/4carz1024_glass
+Ns 6451.600098
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_4carz1024_glass.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_4carz1024_glass.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_effects_flat_normal.tga
+
+newmtl materials/models/props_vehicles/car_glass
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_car_glass.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_car_glass_ref.tga
+
+newmtl materials/models/props_vehicles/police_cab_city
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_police_cab_city.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_police_cab_ref.tga
+
+newmtl materials/models/props_vehicles/semi_trailer
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_semi_trailer.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_semi_trailer_ref.tga
+
+newmtl materials/models/props_vehicles/truck001a_01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_truck001a_01.tga
+
+newmtl materials/models/props_vehicles/van1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_van1.tga
+map_Ks C:/Users/ALENWARE/Downloads/textures/materials_models_props_vehicles_van1_ref.tga
+
+newmtl materials/models/props_vents/borealis_vent001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vents_borealis_vent001.tga
+
+newmtl materials/models/props_vents/borealis_vent001b
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vents_borealis_vent001b.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_vents_borealis_vent001_normal.tga
+
+newmtl materials/models/props_vents/borealis_vent001c
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_vents_borealis_vent001c.tga
+map_Bump -bm 1.000000 C:/Users/ALENWARE/Downloads/textures/materials_models_props_vents_borealis_vent001_normal.tga
+
+newmtl materials/models/props_wasteland/controlroom_chair001a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_controlroom_chair001a.tga
+
+newmtl materials/models/props_wasteland/controlroom_tables001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_controlroom_tables001.tga
+
+newmtl materials/models/props_wasteland/coolingtank02
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_coolingtank02.tga
+
+newmtl materials/models/props_wasteland/fence_alpha
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_fence_alpha.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_c17_fence_alpha.tga
+
+newmtl materials/models/props_wasteland/fence_sheet01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_fence_sheet01.tga
+
+newmtl materials/models/props_wasteland/prison_objects002
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_prison_objects002.tga
+
+newmtl materials/models/props_wasteland/prison_objects005
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_prison_objects005.tga
+
+newmtl materials/models/props_wasteland/prison_switchbox01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_prison_switchbox01.tga
+
+newmtl materials/models/props_wasteland/prison_yard001
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_prison_yard001.tga
+
+newmtl materials/models/props_wasteland/quarryobjects01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_wasteland_quarryobjects01.tga
+
+newmtl materials/models/props_windows/windows_urban01
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_windows_windows_urban01.tga
+
+newmtl ~NOyTYmKw/props/cs_assault/assault_subway_tunnel_ring
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_cs_assault_assault_subway_tunnel_ring.tga
+
+newmtl ~NOyTYmKw/props/cs_assault/warehouseskylightglassbroken_a
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_cs_assault_warehouseskylightglassbroken.tga
+map_d C:/Users/ALENWARE/Downloads/textures/~NOyTYmKw_props_cs_assault_warehouseskylightglassbroken.tga
+
+newmtl ~NOyTYmKw/props_foliage/urban_trees_branches03_medium
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_urban_trees_branches03.tga
+map_d C:/Users/ALENWARE/Downloads/textures/materials_models_props_foliage_urban_trees_branches03.tga

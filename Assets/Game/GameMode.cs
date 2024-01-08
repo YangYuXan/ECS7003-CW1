@@ -14,6 +14,7 @@ public class GameMode : MonoBehaviour
     private int _currentAttackIndex=0;
     public bool _isPlayerTurn=false;
     public bool _isBattle;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,15 +39,17 @@ public class GameMode : MonoBehaviour
         for(int i=0;i<FindObjectsOfType<Character>().Length;i++)
         {
             if (Vector3.Distance(position, 
-                    FindObjectsOfType<Character>()[i].transform.position)<50)
+                    FindObjectsOfType<Character>()[i].transform.position)<1)
             {
                 battleQueue.Add(FindObjectsOfType<Character>()[i]);
             }
+            /*
             if (FindObjectsOfType<Character>()[i]._isPlayPawn&& Vector3.Distance(position,
                     FindObjectsOfType<Character>()[i].transform.position) >= 50)
             {
                 battleQueue.Add(FindObjectsOfType<Character>()[i]);
-            }
+            }*/
+            battleQueue.Add(player.GetComponent<Character>());
         }
     }
 
@@ -132,11 +135,12 @@ public class GameMode : MonoBehaviour
         battleQueue[_currentAttackIndex]._canOperate = false;
 
 
-        _currentAttackIndex++;
-        if (_currentAttackIndex > battleQueue.Count-1)
+        
+        if (_currentAttackIndex+1 > battleQueue.Count-1)
         {
             _currentAttackIndex = 0;
         }
+        _currentAttackIndex++;
 
         //Get the next character in the queue who can fight
         for (int i = _currentAttackIndex; i < battleQueue.Count; i++)
