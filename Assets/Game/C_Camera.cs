@@ -72,8 +72,7 @@ public class C_Camera : MonoBehaviour
         {
             transform.position += new Vector3(0f, -0.2f, 0f);
         }
-        PlayerPawnHP.text = playerPawn.GetComponent<Character>().currentHealth.ToString() + "/" +
-                            playerPawn.GetComponent<Character>().maxhealth.ToString();
+
 
         transform.position += _moveDir;
 
@@ -82,13 +81,11 @@ public class C_Camera : MonoBehaviour
         if (Physics.Raycast(ray, out casHit))
         {
             //A health bar appears when moving onto a character
-            if (casHit.collider.gameObject.tag == "Character")
+            if (casHit.collider.gameObject.tag == "Zombie")
             {
                 TargetHPUI.SetActive(true);
-                Character showCharacter = casHit.collider.gameObject.GetComponent<Character>();
-                TargetHPInformation.text =
-                    showCharacter.currentHealth.ToString() + "/" + showCharacter.maxhealth.ToString();
-                HPImage.fillAmount = showCharacter.currentHealth / showCharacter.maxhealth;
+                Zom2 showCharacter = casHit.collider.gameObject.GetComponent<Zom2>();
+                HPImage.fillAmount = showCharacter.HP / 50;
             }
             else
             {
@@ -167,7 +164,7 @@ public class C_Camera : MonoBehaviour
         {
             if (!EventSystem.current.IsPointerOverGameObject())
             {
-                if (casHit.collider.gameObject.tag != "Character")
+                if (casHit.collider.gameObject.tag != "Zombie")
                 {
                     if (casHit.collider.gameObject.tag == "box")
                     {
@@ -177,18 +174,21 @@ public class C_Camera : MonoBehaviour
                             component.ammo += box.ammo;
                             box.ammo = 0;
                         }
-                    }else if (casHit.collider.gameObject.tag == "Weapon")
+                    }
+                    else if (casHit.collider.gameObject.tag == "Weapon")
                     {
-                     
-                        component.hasWeapon = true;
+
+                        playerPawn.gameObject.GetComponent<NewCharacter>().weapon.SetActive(true);
                         GetComponent<Task1>().task2 = true;
                         Destroy(GetComponent<Task1>().task2mark.gameObject);
 
                     }
                     else
                     {
-                        
+                        playerPawn.gameObject.GetComponent<NewCharacter>().AI_MovetoPoint(casHit.point);
 
+                        // 2024 /1 /8
+                        /*
                         //Calculate total navigation path length
                         float totalLength = 0f;
                         for (int i = 0; i < component.pathFound.lineRenderer.positionCount - 1; i++)
@@ -214,10 +214,50 @@ public class C_Camera : MonoBehaviour
                                 component.AI_MovetoPoint(casHit.point);
                             }
                         }
+                        */
                     }
                 }
                 else
                 {
+                    if (playerPawn.gameObject.GetComponent<NewCharacter>().behaviour == "attack")
+                    {
+                        //Z1
+                        if (casHit.collider.gameObject.GetComponent<Zom1>())
+                        {
+                            casHit.collider.gameObject.GetComponent<Zom1>().PlayDeath();
+                        }
+                        //Z2
+                        else if (casHit.collider.gameObject.GetComponent<Zom2>()|| casHit.collider.gameObject.GetComponent<Zom3>())
+                        {
+                            playerPawn.gameObject.GetComponent<NewCharacter>().ApplyDamage(casHit.collider.gameObject,false);
+                        }
+
+                        else
+                        {
+                            playerPawn.gameObject.GetComponent<NewCharacter>().AI_MovetoPoint(casHit.point);
+                        }
+                    }
+
+                    if (playerPawn.gameObject.GetComponent<NewCharacter>().behaviour == "attack2")
+                    {
+                        //Z1
+                        if (casHit.collider.gameObject.GetComponent<Zom1>())
+                        {
+                            casHit.collider.gameObject.GetComponent<Zom1>().PlayDeath();
+                        }
+                        //Z2
+                        else if (casHit.collider.gameObject.GetComponent<Zom2>() || casHit.collider.gameObject.GetComponent<Zom3>())
+                        {
+                            playerPawn.gameObject.GetComponent<NewCharacter>().ApplyDamage(casHit.collider.gameObject,true);
+                        }
+
+                        else
+                        {
+                            playerPawn.gameObject.GetComponent<NewCharacter>().AI_MovetoPoint(casHit.point);
+                        }
+                    }
+
+                    /*
                     //You can only hit someone after selecting the attack mode
                     if (component.GetCharacterStatus() == Character.CharacterStatus.attack)
                     {
@@ -249,8 +289,9 @@ public class C_Camera : MonoBehaviour
                                 break;
 
                         }
+                    */
 
-                    }
+
                 }
 
             }

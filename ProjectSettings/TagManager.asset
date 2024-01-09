@@ -9,6 +9,7 @@ TagManager:
   - mark
   - Item
   - Weapon
+  - Zombie
   layers:
   - Default
   - TransparentFX

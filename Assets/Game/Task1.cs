@@ -20,7 +20,7 @@ public class Task1 : MonoBehaviour
 
 
     public bool task4 = false;
-    public GameObject Task4enermyTargets;
+    public GameObject Task4enermyTarget1;
 
 
     public bool task5 = false;
@@ -49,7 +49,7 @@ public class Task1 : MonoBehaviour
         }
         if (task3 && !task4)
         {
-            TextMesh.text = "Kill Zombie";
+            TextMesh.text = "Kill Zombies";
         }
         if (task4 && !task5)
         {
@@ -60,7 +60,7 @@ public class Task1 : MonoBehaviour
         {
             if(Vector3.Distance(transform.position, task1Obj.transform.position) < 2)
             {
-            GetComponent<Character>().ammo += 20;
+            GetComponent<NewCharacter>().ammo += 20;
             Destroy(task1Obj);
             task1 = true;
             }
@@ -81,20 +81,20 @@ public class Task1 : MonoBehaviour
         }
  
 
-            if (Task4enermyTargets == null)
-            {
-                FindFirstObjectByType<GameMode>()._isBattle = false;
-                task4 = true;
-            }
+        if (Task4enermyTarget1.gameObject == null)
+        {
+          
+          task4 = true;
+            player.GetComponent<NewCharacter>().canAttack = true;
+        }
 
         
 
-        if (Vector3.Distance(transform.position, task5point.transform.position) < 2)
+        if (Vector3.Distance(transform.position, task5point.transform.position) < 5)
 
         {
-             
-                task5 = true;
-
+            task5 = true;
+            TextMesh.text = "Game Over You Win";
         }
     }
 }
